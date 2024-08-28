@@ -235,4 +235,6 @@ const Dashboard: React.FC = () => {
   );
 };
 
+Dashboard.displayName = 'Dashboard';
+
 export default Dashboard;

@@ -190,7 +190,7 @@ const AssessmentMode: React.FC<AssessmentModeProps> = ({ levelId, assessmentType
         setAssessmentComplete(true)
       }
     }, 500)
-  }, [currentWordIndex, startTime, words, user, updateUserProgress])
+  }, [currentWordIndex, startTime, words, user, updateUserProgress, assessmentType, incorrectAnswers, levelId, onComplete, sublevel]);
 
   const handleSpeak = useCallback(() => {
     if (wordInfo) {
