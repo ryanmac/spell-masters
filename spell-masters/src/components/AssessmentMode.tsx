@@ -37,7 +37,7 @@ interface IncorrectAnswer {
   correctChoice: string;
 }
 
-const ALWAYS_SHOW_CORRECT_FIRST = true
+const ALWAYS_SHOW_CORRECT_FIRST = false
 const WORDS_PER_ASSESSMENT = 20
 
 const AssessmentMode = React.memo<AssessmentModeProps>(({
@@ -284,7 +284,7 @@ const AssessmentMode = React.memo<AssessmentModeProps>(({
         speak(currentWord);
       }
     }
-  }, [words, currentWordIndex, autoSpeak, fetchWordData, speak]);
+  }, [words, currentWordIndex, autoSpeak]);
 
   useEffect(() => {
     if (assessmentComplete && user && !navigationOccurredRef.current) {
