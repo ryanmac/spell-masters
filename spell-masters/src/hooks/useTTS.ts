@@ -1,5 +1,5 @@
 // src/hooks/useTTS.ts
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 
 export function useTTS() {
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([])
@@ -17,11 +17,20 @@ export function useTTS() {
     }
   }, [])
 
-  const speak = (text: string, voice?: SpeechSynthesisVoice) => {
+  const stop = useCallback(() => {
+    if (window.speechSynthesis) {
+      window.speechSynthesis.cancel()
+      setSpeaking(false)
+    }
+  }, [])
+
+  const speak = useCallback((text: string, voice?: SpeechSynthesisVoice) => {
     if (!window.speechSynthesis) {
       console.error('Text-to-speech not supported in this browser.')
       return
     }
+
+    stop() // Stop any ongoing speech before starting a new one
 
     const utterance = new SpeechSynthesisUtterance(text)
     if (voice) {
@@ -32,14 +41,12 @@ export function useTTS() {
     utterance.onend = () => setSpeaking(false)
 
     window.speechSynthesis.speak(utterance)
-  }
+  }, [stop])
 
-  const stop = () => {
-    if (window.speechSynthesis) {
-      window.speechSynthesis.cancel()
-      setSpeaking(false)
-    }
-  }
+  const speakSentence = useCallback((sentence: string, word: string) => {
+    const fullSentence = sentence.replace(/_____/g, word)
+    speak(fullSentence)
+  }, [speak])
 
-  return { speak, stop, voices, speaking }
+  return { speak, speakSentence, stop, voices, speaking }
 }

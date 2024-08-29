@@ -72,7 +72,7 @@ const AssessmentMode = React.memo<AssessmentModeProps>(({
 
   const { wordInfo } = useWord(words[currentWordIndex] || '');
   const { generateMisspellings } = useMisspelling();
-  const { speak, stop, speaking } = useTTS();
+  const { speak, speakSentence, stop, speaking } = useTTS()
   const { user, updateUserProgress, updateLevelProgress } = useUser();
   const router = useRouter();
   const progress = ((currentWordIndex + 1) / words.length) * 100;
@@ -157,14 +157,15 @@ const AssessmentMode = React.memo<AssessmentModeProps>(({
     return [];
   }, [words, currentWordIndex, generateOptions]);
 
-  const speakSentence = (sentence: string, word: string) => {
-    sentence = sentence.replace(/_____/g, word);
-    const utterance = new SpeechSynthesisUtterance(sentence);
-    window.speechSynthesis.speak(utterance);
-  };
+  const handleSpeakSentence = useCallback(() => {
+    if (wordInfo) {
+      speakSentence(exampleSentence, wordInfo.word)
+    }
+  }, [speakSentence, exampleSentence, wordInfo])
 
   const handleAnswer = useCallback((selectedOption: string) => {
     console.log('handleAnswer called with:', selectedOption);
+    stop();
     if (answeredRef.current) return;
     answeredRef.current = true;
   
@@ -203,7 +204,7 @@ const AssessmentMode = React.memo<AssessmentModeProps>(({
         setAssessmentComplete(true);
       }
     }, 500);
-  }, [currentWordIndex, startTime, words, user, updateUserProgress]);
+  }, [currentWordIndex, startTime, words, user, updateUserProgress, stop]);
 
   const handleSpeak = useCallback(() => {
     if (wordInfo) {
@@ -270,6 +271,7 @@ const AssessmentMode = React.memo<AssessmentModeProps>(({
 
   useEffect(() => {
     if (words.length > 0 && currentWordIndex < words.length) {
+      stop();
       const currentWord = words[currentWordIndex];
       console.log('Fetching word data for:', currentWord);
       fetchWordData(currentWord).then(({ sentence, definition }) => {
@@ -419,8 +421,8 @@ const AssessmentMode = React.memo<AssessmentModeProps>(({
         
           <div 
             className="flex items-start cursor-pointer hover:bg-gray-700 rounded p-1 transition-colors duration-200"
-            onClick={() => speakSentence(exampleSentence, wordInfo.word)}
-            style={{ minHeight: '5em' }} // Add this line to set the minimum height
+            onClick={handleSpeakSentence}
+            style={{ minHeight: '10em' }} // Add this line to set the minimum height
           >
             <div className="w-10 flex-shrink-0 flex justify-center">
               <FaVolumeUp 
