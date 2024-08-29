@@ -5,7 +5,9 @@ import { Suspense } from 'react'
 import KinestheticPractice from '@/components/KinestheticPractice'
 
 export default function KinestheticPracticePage() {
-  <Suspense fallback={<div>Loading...</div>}>
-    return <KinestheticPractice />
-  </Suspense>
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <KinestheticPractice />
+    </Suspense>
+  )
 }
