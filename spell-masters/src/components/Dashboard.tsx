@@ -63,6 +63,8 @@ const LevelProgress: React.FC<{
   );
 });
 
+LevelProgress.displayName = 'LevelProgress';  // This line sets the display name
+
 const Dashboard: React.FC = () => {
   const { user } = useUser();
   const router = useRouter();
@@ -90,7 +92,7 @@ const Dashboard: React.FC = () => {
 
       setHighestLevel({ level: maxLevel.toString(), type: maxType });
     }
-  }, [user?.levelProgress]);
+  }, [user?.levelProgress, user]);
 
   useEffect(() => {
     if (highestLevel.level !== '1') {

@@ -1,7 +1,7 @@
 // src/components/KinestheticPractice.tsx
 'use client'
 
-import React, { useState, useEffect, useRef, useCallback } from 'react'
+import React, { Suspense, useState, useEffect, useRef, useCallback } from 'react'
 import { useUser } from '@/contexts/UserContext'
 import { useTTS } from '@/hooks/useTTS'
 import { useRouter, useSearchParams } from 'next/navigation'
@@ -271,53 +271,55 @@ const KinestheticPractice: React.FC = () => {
   }
 
   return (
-    <div className="max-w-2xl mx-auto p-4">
-      <h2 className="text-2xl font-bold mb-4">Kinesthetic Practice</h2>
-      <p className="mb-2">Trace the word: {words[currentWordIndex]}</p>
-      <div className="flex justify-between items-center mb-2">
-        <button onClick={handleSpeak} className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-          Speak Word
-        </button>
-        <label className="flex items-center">
-          <input 
-            type="checkbox" 
-            checked={debug} 
-            onChange={(e) => {
-              setDebug(e.target.checked);
-              handleReset(); // Reset and redraw when toggling debug mode
-            }} 
-            className="mr-2" 
-          />
-          Debug Mode
-        </label>
+    <Suspense fallback={<div>Loading...</div>}>
+      <div className="max-w-2xl mx-auto p-4">
+        <h2 className="text-2xl font-bold mb-4">Kinesthetic Practice</h2>
+        <p className="mb-2">Trace the word: {words[currentWordIndex]}</p>
+        <div className="flex justify-between items-center mb-2">
+          <button onClick={handleSpeak} className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+            Speak Word
+          </button>
+          <label className="flex items-center">
+            <input 
+              type="checkbox" 
+              checked={debug} 
+              onChange={(e) => {
+                setDebug(e.target.checked);
+                handleReset(); // Reset and redraw when toggling debug mode
+              }} 
+              className="mr-2" 
+            />
+            Debug Mode
+          </label>
+        </div>
+        <canvas
+          ref={canvasRef}
+          width={400}
+          height={200}
+          className="border border-gray-300 mb-4"
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
+          onMouseMove={handleDrawing}
+        ></canvas>
+        <div className="flex justify-between">
+          <button
+            onClick={handleReset}
+            className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+          >
+            Reset
+          </button>
+          <button
+            onClick={handleCheck}
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          >
+            Check
+          </button>
+        </div>
+        {isCorrect && (
+          <p className="mt-4 text-green-500 font-bold">Correct! Well done!</p>
+        )}
       </div>
-      <canvas
-        ref={canvasRef}
-        width={400}
-        height={200}
-        className="border border-gray-300 mb-4"
-        onMouseDown={handleMouseDown}
-        onMouseUp={handleMouseUp}
-        onMouseMove={handleDrawing}
-      ></canvas>
-      <div className="flex justify-between">
-        <button
-          onClick={handleReset}
-          className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
-        >
-          Reset
-        </button>
-        <button
-          onClick={handleCheck}
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-        >
-          Check
-        </button>
-      </div>
-      {isCorrect && (
-        <p className="mt-4 text-green-500 font-bold">Correct! Well done!</p>
-      )}
-    </div>
+    </Suspense>
   )
 }
 

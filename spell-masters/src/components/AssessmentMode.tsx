@@ -190,7 +190,7 @@ const AssessmentMode: React.FC<AssessmentModeProps> = ({ levelId, assessmentType
         setAssessmentComplete(true)
       }
     }, 500)
-  }, [currentWordIndex, startTime, words, user, updateUserProgress, assessmentType, incorrectAnswers, levelId, onComplete, sublevel]);
+  }, [currentWordIndex, startTime, words, user, updateUserProgress]);
 
   const handleSpeak = useCallback(() => {
     if (wordInfo) {
@@ -254,7 +254,7 @@ const AssessmentMode: React.FC<AssessmentModeProps> = ({ levelId, assessmentType
   
       updateUserProgress(updatedUserProgress);
     }
-  }, [assessmentComplete, user, updateLevelProgress, updateUserProgress, words, correctWords, score, totalTime]);
+  }, [assessmentComplete, user, updateLevelProgress, updateUserProgress, words, correctWords, score, totalTime, assessmentType, levelId, sublevel, incorrectAnswers, onComplete]);
 
   useEffect(() => {
     if (assessmentComplete && user && !navigationOccurredRef.current) {
@@ -293,7 +293,7 @@ const AssessmentMode: React.FC<AssessmentModeProps> = ({ levelId, assessmentType
       }
       router.push(`/performance-review?results=${encodeURIComponent(JSON.stringify(assessmentResults))}`)
     }
-  }, [navigationOccurredRef.current])
+  }, [correctWords, incorrectAnswers, router, score, totalTime, words.length])
 
   if (isLoading) {
     return <div className="text-center mt-8">Loading assessment...</div>
