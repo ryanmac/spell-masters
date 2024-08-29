@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useUser } from '@/contexts/UserContext';
 import Link from 'next/link';
 import { FaTimes, FaChevronUp, FaChevronDown } from 'react-icons/fa';
+import { PiExam } from "react-icons/pi";
 
 const ComprehensiveEvaluationHistory: React.FC = () => {
   const { user, updateUserProgress } = useUser();
@@ -24,30 +25,25 @@ const ComprehensiveEvaluationHistory: React.FC = () => {
   };
 
   if (!user || user.comprehensiveEvaluations.length === 0) {
-    return (
-      <div className="max-w-2xl mx-auto p-4">
-        <h2 className="text-2xl font-bold mb-4">Comprehensive Evaluation History</h2>
-        <p className="mb-4">You haven&apos;t taken any comprehensive evaluations yet.</p>
-        <Link href="/comprehensive-evaluation" className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-          Take a new comprehensive evaluation
-        </Link>
-      </div>
-    );
+    return;
   }
 
   return (
     <div className="max-w-4xl mx-auto p-4">
       <h2 className="text-2xl font-bold mb-4">Comprehensive Evaluation History</h2>
-      <Link href="/comprehensive-evaluation" className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 inline-block mb-4">
-        Take a new comprehensive evaluation
-      </Link>
+      {/* <Link href="/comprehensive-evaluation" className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 inline-block mb-4">
+        <div className="flex items-center space-x-2">
+          <PiExam size={24} className="flex-shrink-0" />
+          <span>Start New Test</span>
+        </div>
+      </Link> */}
       {user.comprehensiveEvaluations.map((evaluation, index) => {
         const isExpanded = expandedEvaluation === evaluation.date;
         return (
           <div key={index} className="mb-4 border rounded p-4">
             <div className="flex justify-between items-center">
               <h3 className="text-lg font-semibold">
-                Level {evaluation.levelTested}
+                Level {evaluation.level} {evaluation.type === 'bonus' ? 'Bonus' : 'Core'}
                 <span className="ml-4">
                   {renderStars(evaluation.score, evaluation.totalQuestions)}
                 </span>

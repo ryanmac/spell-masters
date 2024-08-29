@@ -1,27 +1,37 @@
-// src/app/comprehensive-evaluation/page.tsx
+// src/app/comprehensive-evaluation/[levelId]/page.tsx
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { useUser } from '@/contexts/UserContext'
+import { useUser, Evaluation } from '@/contexts/UserContext'
 import AssessmentMode from '@/components/AssessmentMode'
+import { useParams, useSearchParams } from 'next/navigation'
 
 const ComprehensiveEvaluation: React.FC = () => {
   const { user, updateUserProgress } = useUser()
-  const [evaluationLevel, setEvaluationLevel] = useState(1)
+  const params = useParams()
+  const searchParams = useSearchParams()
+  const [evaluationLevel, setEvaluationLevel] = useState<string>('1')
+  const [type, setType] = useState<'core' | 'bonus'>('core')
   const [evaluationComplete, setEvaluationComplete] = useState(false)
 
   useEffect(() => {
-    if (user) {
-      setEvaluationLevel(Math.max(1, user.grade - 2))
+    const levelId = params.levelId as string
+    const typeParam = searchParams.get('type')
+    if (levelId) {
+      setEvaluationLevel(levelId)
     }
-  }, [user])
+    if (typeParam === 'core' || typeParam === 'bonus') {
+      setType(typeParam)
+    }
+  }, [params, searchParams])
 
   const handleEvaluationComplete = (results: any) => {
     console.log('Evaluation complete, results:', results);
     if (user) {
-      const newEvaluation = {
+      const newEvaluation: Evaluation = {
         date: new Date().toISOString(),
-        levelTested: evaluationLevel,
+        level: evaluationLevel,
+        type: type,
         score: results.score,
         totalQuestions: results.totalQuestions,
         wordsTested: [...results.correctWords, ...results.incorrectAnswers.map((a: any) => a.word)],
@@ -44,6 +54,7 @@ const ComprehensiveEvaluation: React.FC = () => {
       });
 
       console.log('Updated comprehensive evaluations:', updatedEvaluations);
+      setEvaluationComplete(true);
     }
   }
 
@@ -59,8 +70,13 @@ const ComprehensiveEvaluation: React.FC = () => {
   return (
     <div className="max-w-2xl mx-auto p-4">
       <h2 className="text-2xl font-bold mb-4">Comprehensive Evaluation</h2>
-      <p className="mb-4">This evaluation will test your knowledge of words from the previous three levels.</p>
-      <AssessmentMode levelId={evaluationLevel.toString()} assessmentType="comprehensive" onComplete={handleEvaluationComplete} />
+      <p className="mb-4">This evaluation will test your knowledge of words from Level {evaluationLevel} {type}.</p>
+      <AssessmentMode 
+        levelId={evaluationLevel} 
+        assessmentType="comprehensive" 
+        onComplete={handleEvaluationComplete}
+        comprehensiveType={type}
+      />
     </div>
   )
 }

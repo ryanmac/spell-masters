@@ -1,10 +1,12 @@
 // src/components/Dashboard.tsx
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { useRouter } from 'next/navigation';
-import { useUser } from '@/contexts/UserContext';
-import { useLocalStorage } from '@/hooks/useLocalStorage';
-import ComprehensiveEvaluationHistory from '@/components/ComprehensiveEvaluationHistory';
-import Link from 'next/link';
+import React, { useState, useEffect, useCallback, useMemo } from 'react'
+import { useRouter } from 'next/navigation'
+import { useUser } from '@/contexts/UserContext'
+import { useLocalStorage } from '@/hooks/useLocalStorage'
+import ComprehensiveEvaluationHistory from '@/components/ComprehensiveEvaluationHistory'
+import Link from 'next/link'
+import { FaPencilAlt, FaBrain } from 'react-icons/fa'
+import { PiExam } from "react-icons/pi";
 
 const LevelProgress: React.FC<{ 
   level: string; 
@@ -14,6 +16,7 @@ const LevelProgress: React.FC<{
   onToggle: (level: string, type: string, isExpanded: boolean) => void;
 }> = React.memo(({ level, type, progress, isExpanded, onToggle }) => {
   const sublevels = type === 'core' ? 20 : 10;
+  
 
   const renderStars = (stars: number) => '⭐'.repeat(stars) || '☆☆☆';
 
@@ -66,7 +69,7 @@ const LevelProgress: React.FC<{
 LevelProgress.displayName = 'LevelProgress';  // This line sets the display name
 
 const Dashboard: React.FC = () => {
-  const { user } = useUser();
+  const { user, updateUserProgress } = useUser();
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(true);
   const [expandedLevels, setExpandedLevels] = useLocalStorage<Record<string, boolean>>('expandedLevels', {});
@@ -74,6 +77,8 @@ const Dashboard: React.FC = () => {
 
   const [wordsMastered, setWordsMastered] = useState(0);
   const [unlockedLevels, setUnlockedLevels] = useState<string[]>([]);
+
+  const renderStars = (stars: number) => '⭐'.repeat(stars) || '☆☆☆';
 
   useEffect(() => {
     if (user && user.levelProgress) {
@@ -135,6 +140,16 @@ const Dashboard: React.FC = () => {
     }
   }, [user, router, calculateDashboardStats]);
 
+
+  const getHighestComprehensiveStars = useCallback((level: string, type: 'core' | 'bonus') => {
+    if (!user || !user.comprehensiveEvaluations) return 0;
+    const relevantEvaluations = user.comprehensiveEvaluations.filter(
+      evaluation => evaluation.level === level && evaluation.type === type
+    );
+    if (relevantEvaluations.length === 0) return 0;
+    return Math.max(...relevantEvaluations.map(evaluation => Math.floor((evaluation.score / evaluation.totalQuestions) * 3)));
+  }, [user]);
+
   const renderLevels = useMemo(() => {
     if (!user) return null;
     return Array.from({ length: 13 }, (_, i) => i + 1).map((level) => (
@@ -146,6 +161,11 @@ const Dashboard: React.FC = () => {
           isExpanded={expandedLevels[`${level}-core`] || false}
           onToggle={handleLevelToggle}
         />
+        <div className="mb-2">
+          <Link href={`/comprehensive-evaluation/${level}?type=core`} className="block w-full text-center p-2 bg-green-500 text-white rounded hover:bg-green-600">
+            Test Level {level} Core {renderStars(getHighestComprehensiveStars(level.toString(), 'core'))}
+          </Link>
+        </div>
         <LevelProgress 
           level={level.toString()} 
           type="bonus" 
@@ -153,9 +173,14 @@ const Dashboard: React.FC = () => {
           isExpanded={expandedLevels[`${level}-bonus`] || false}
           onToggle={handleLevelToggle}
         />
+        <div className="mb-4">
+          <Link href={`/comprehensive-evaluation/${level}?type=bonus`} className="block w-full text-center p-2 bg-purple-500 text-white rounded hover:bg-purple-600">
+            Test Level {level} Bonus {renderStars(getHighestComprehensiveStars(level.toString(), 'bonus'))}
+          </Link>
+        </div>
       </React.Fragment>
     ));
-  }, [user, expandedLevels, handleLevelToggle]);
+  }, [user, expandedLevels, handleLevelToggle, getHighestComprehensiveStars]);
 
   if (isLoading) {
     return <div className="text-center mt-8">Loading dashboard...</div>;
@@ -163,6 +188,15 @@ const Dashboard: React.FC = () => {
 
   if (!user) {
     return null;
+  }
+
+  // Allow user to reset challenging words to zero
+  const handleResetChallengingWords = () => {
+    if (user) {
+      updateUserProgress({
+        challengingWords: [],
+      });
+    }
   }
 
   console.log('Dashboard user:', user);
@@ -176,60 +210,50 @@ const Dashboard: React.FC = () => {
           Your Progress
         </h3>
         <div className="bg-blue-400 p-4 rounded">
-          <p>Current Grade: {user.grade}</p>
+          {/* <p>Current Grade: {user.grade}</p> */}
           <p>Total Stars: {user.totalStars} ({user.completedCore} Core / {user.completedBonus} Bonus)</p>
           <p>Completed: {user.completedCore + user.completedBonus} ({user.completedCore} Core / {user.completedBonus} Bonus)</p>
           <p>Words Mastered: {wordsMastered}</p>
-          <p>Accuracy Rate: {user.accuracyRate.toFixed(2)}%</p>
-          <p>Average Time per Word: {user.averageTimePerWord.toFixed(2)} seconds</p>
-          <p>Challenging Words: {user.challengingWords.length}</p>
+          <p>Accuracy Rate: {user.accuracyRate.toFixed(0)}%</p>
+          <p>Average Time per Word: {user.averageTimePerWord.toFixed(1)} seconds</p>
+          <p>Challenging Words: {user.challengingWords.length}
+            <button onClick={handleResetChallengingWords} className="ml-2 px-2 py-1 text-sm text-red-500 rounded hover:text-red-600 border-0">
+              ❌
+            </button>
+          </p>
         </div>
       </div>
       <div className="mb-8">
-        <h3 className="text-xl font-semibold mb-2">Learning Modes</h3>
-        <div className="grid grid-cols-3 gap-4">
-          {/* <Link href={`/assessment/${user.grade}?type=core`} className="p-4 bg-green-500 text-white rounded hover:bg-green-600 text-center">
-            Start Assessment
-          </Link> */}
-          {user.challengingWords.length > 0 && (
-            <Link href="/kinesthetic-practice" className="p-4 bg-yellow-500 text-white rounded hover:bg-yellow-600 text-center">
-              Kinesthetic Practice
-            </Link>
-          )}
+        {/* <h3 className="text-xl font-semibold mb-2">Learning Modes</h3> */}
+        <div className="grid grid-cols-2 gap-4">
           {user.challengingWords.length > 0 && (
             <Link href="/targeted-reinforcement" className="p-4 bg-red-500 text-white rounded hover:bg-red-600 text-center">
-              Targeted Reinforcement
+              <div className="flex items-center space-x-2">
+                <FaBrain size={24} className="flex-shrink-0" />
+                <span>Practice</span>
+              </div>
             </Link>
           )}
-          {/* <Link href={`/assessment/${user.grade}?type=bonus`} className="p-4 bg-purple-500 text-white rounded hover:bg-purple-600 text-center">
-            Bonus Challenges
+          {user.challengingWords.length > 0 && (
+            <Link href="/kinesthetic-practice" className="p-4 bg-yellow-500 text-white rounded hover:bg-yellow-600 text-center">
+              <div className="flex items-center space-x-2">
+                <FaPencilAlt size={24} className="flex-shrink-0" />
+                <span>Trace</span>
+              </div>
+            </Link>
+          )}
+          {/* <Link href="/comprehensive-evaluation" className="p-4 bg-blue-500 text-white rounded hover:bg-blue-600 text-center">
+            <div className="flex items-center space-x-2">
+              <PiExam size={24} className="flex-shrink-0" />
+              <span>Test</span>
+            </div>
           </Link> */}
-          <Link href="/comprehensive-evaluation" className="p-4 bg-blue-500 text-white rounded hover:bg-blue-600 text-center">
-            Comprehensive Evaluation
-          </Link>
         </div>
       </div>
       <div className="mb-8">
         <h3 className="text-xl font-semibold mb-4">Levels</h3>
         <div className="grid grid-cols-1 gap-4">
-          {Array.from({ length: 13 }, (_, i) => i + 1).map((level) => (
-            <React.Fragment key={level}>
-              <LevelProgress 
-                level={level.toString()} 
-                type="core" 
-                progress={user.levelProgress[level]?.core || []}
-                isExpanded={expandedLevels[`${level}-core`] || false}
-                onToggle={handleLevelToggle}
-              />
-              <LevelProgress 
-                level={level.toString()} 
-                type="bonus" 
-                progress={user.levelProgress[level]?.bonus || []}
-                isExpanded={expandedLevels[`${level}-bonus`] || false}
-                onToggle={handleLevelToggle}
-              />
-            </React.Fragment>
-          ))}
+          {renderLevels}
         </div>
       </div>
       <ComprehensiveEvaluationHistory />

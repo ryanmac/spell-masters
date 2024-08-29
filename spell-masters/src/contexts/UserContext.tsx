@@ -12,6 +12,16 @@ interface UserContextType {
   logout: () => void;
 }
 
+export interface Evaluation {
+  date: string;
+  level: string;
+  type: 'core' | 'bonus';
+  score: number;
+  totalQuestions: number;
+  wordsTested: string[];
+  incorrect: string[];
+}
+
 export interface Review {
   word: string;
   reviewDate: string; // ISO string format
@@ -42,14 +52,7 @@ export interface User {
       wordsMastered: number;
     }
   };
-  comprehensiveEvaluations: {
-    date: string;
-    levelTested: number;
-    score: number;
-    totalQuestions: number;
-    wordsTested: string[];
-    incorrect: string[];
-  }[];
+  comprehensiveEvaluations: Evaluation[];
   scheduledReviews?: Review[];
   levelProgress: {
     [key: string]: {

@@ -1,0 +1,584 @@
+{
+  "ubiquitous": [
+    "Present, appearing, or found everywhere.",
+    "Found in or present in many places or situations.",
+    "So common as to be found everywhere.",
+    "Widely and frequently experienced or encountered."
+  ],
+  "ulterior": [
+    "Secretive; concealed.",
+    "Relating to a person's secret or hidden intentions, especially when these differ from their stated intentions.",
+    "Not immediately apparent or evident; concealed beneath an outward appearance or surface."
+  ],
+  "umbilical": [
+    "Relating to the navel, which is the point where the umbilical cord was attached during fetal development.",
+    "(in astronautics) A flexible cable that provides electrical power and communication between a spacecraft and its external support systems."
+  ],
+  "umbrella": [
+    "A device typically used to protect against rain, made up of a collapsible frame with a fabric canopy supported by spokes that radiate from a central hub, which is held over a person by gripping the handle or using an automatic opening mechanism.",
+    "(Slang) An organization or corporation that provides cover or protection for smaller units within it, such as subsidiaries or branches."
+  ],
+  "unabashedly": [
+    "Without embarrassment or shame; freely or openly, regardless of potential criticism or disapproval."
+  ],
+  "unabated": [
+    "Continuing without interruption, pause, or reduction; not lessening or ceasing.",
+    "Not diminished or alleviated; ongoing without relief.",
+    "Unchecked or unrestrained; persistently active or intense."
+  ],
+  "unacceptable": [
+    "Not acceptable, fitting, or proper under the circumstances; not meeting a required standard or expectation."
+  ],
+  "unanimity": [
+    "Unanimous agreement or consent among all members of a group or organization, indicating complete harmony in decision-making or opinion."
+  ],
+  "unanimous": [
+    "In complete agreement; all members of a group expressing the same opinion or decision, without any dissenting votes or objections."
+  ],
+  "unanimously": [
+    "In complete agreement; by a vote or consent of all members of a group, with no one dissenting.",
+    "Without opposition, disagreement, or dissent; in total harmony or accord.",
+    "By universal consent; without any differing opinions.",
+    "(Of a decision) Made by every member of a group, with no one disagreeing or voting against it."
+  ],
+  "unanswerable": [
+    "Not able to be answered or resolved, often because it is too difficult, complicated, or beyond our knowledge.",
+    "Cannot be logically justified or explained.",
+    "Pertains to a question or problem that has no known answer or solution."
+  ],
+  "unanticipated": [
+    "Occurring without being expected, predicted, or planned; unexpected.",
+    "Not known beforehand; unsuspected.",
+    "Unexpectedly arising or happening; unforeseen."
+  ],
+  "unassailable": [
+    "Not able to be attacked, challenged, or refuted due to its strength or validity.",
+    "Impossible to defeat, overcome, or successfully attack.",
+    "Impenetrable; difficult to challenge or undermine."
+  ],
+  "unaware": [
+    "Not aware or informed of a particular thing, situation, or circumstance.",
+    "Lacking knowledge or understanding about something.",
+    "Ignorant or oblivious to certain facts or circumstances.",
+    "Uninformed or unenlightened regarding a specific matter."
+  ],
+  "uncannily": [
+    "In a way that is eerie, spooky, or unusual; suggesting supernatural or mysterious influence; strikingly; surprisingly; to an extraordinary degree."
+  ],
+  "uncanniness": [
+    "A feeling of strangeness, unease, or discomfort caused by something unusual or unfamiliar.",
+    "An attribute that makes something appear eerie, creepy, or unsettling in an inexplicable way.",
+    "A quality in a situation or object that seems strange, mysterious, or supernatural."
+  ],
+  "uncanny": [
+    "Strange or unusual in a way that is hard to explain or understand; mysterious.",
+    "Having an odd, eerie, or unsettling quality; unnatural or supernatural.",
+    "Difficult to account for or explain; inexplicable or puzzling."
+  ],
+  "uncollectible": [
+    "Not able to be collected or gathered due to reasons such as being lost, damaged, or expired.",
+    "Financial term referring to a debt that is unlikely or impossible to collect from a borrower who has defaulted or is insolvent."
+  ],
+  "uncomfortable": [
+    "Feeling physically or emotionally ill at ease, uneasy, or awkward in a certain situation or place.",
+    "Causing physical or mental discomfort to someone, either intentionally or unintentionally.",
+    "Difficult to handle or deal with due to complexity or unfamiliarity."
+  ],
+  "uncomfortably": [
+    "In a way that causes discomfort, unease, or embarrassment.",
+    "At a level or in circumstances that are too warm, tight, bright, noisy, or crowded for comfort or preference.",
+    "Not at ease or relaxed in a particular situation, often due to social anxiety, awkwardness, or unfamiliarity with surroundings."
+  ],
+  "unconditional": [
+    "Without any conditions, restrictions, or limitations attached.",
+    "Demonstrating complete loyalty, support, or dedication without reservations or expectations.",
+    "Totally and completely given or granted with no conditions to be met.",
+    "Free of any limits or stipulations; absolute.",
+    "Completely surrendering or yielding oneself to someone or something.",
+    "Absolute and unqualified assent or approval."
+  ],
+  "unconscionable": [
+    "Extremely difficult to bear or tolerate, unbearable.",
+    "Excessively harsh, cruel, or severe.",
+    "Grossly unfair or improper, especially in a legal context.",
+    "Difficult to understand or explain due to its complexity or ambiguity."
+  ],
+  "unconscious": [
+    "Not aware of one's surroundings, thoughts, or actions; in a state of being asleep or temporarily deprived of consciousness.",
+    "Not consciously realizing something or having it in one's awareness; subconscious.",
+    "In psychology, a state of mind characterized by the absence of self-awareness and voluntary control over behavior; a person may be unconscious due to anesthesia, trauma, or mental condition."
+  ],
+  "uncooperative": [
+    "Not willing to work together or give help; showing a lack of cooperation.",
+    "Difficult to manage or handle, especially in a way that involves other people working together."
+  ],
+  "uncouth": [
+    "Rough, crude, or lacking in refinement; unsophisticated.",
+    "Ignorant of social customs or manners; ill-bred.",
+    "Uncivilized or primitive; uncultured."
+  ],
+  "uncover": [
+    "To reveal what was previously hidden, concealed, or covered up.",
+    "To discover new information or facts by examining something closely.",
+    "To remove a layer of material (such as clothing) to expose the skin beneath it.",
+    "To find something that has been lost or misplaced.",
+    "To expose oneself to danger, risk, or difficulty.",
+    "To bring attention to a previously unknown or obscured issue by discussing it openly."
+  ],
+  "unctuosity": [
+    "The quality of being oily, greasy, or slick.",
+    "Excessive smoothness or slipperiness in speech or writing.",
+    "An excessive amount or use of commas in writing or typesetting."
+  ],
+  "unctuous": [
+    "Slick or greasy to the touch; having a slippery feel.",
+    "Excessively smooth or ingratiating in speech or manners, often with a manipulative intention.",
+    "Overly sweet or rich in flavor, especially in food.",
+    "Oily or fatty in nature."
+  ],
+  "unctuousness": [
+    "Smoothness, especially in the way someone talks or behaves; greasiness.",
+    "Excessively ingratiating behavior, often intended to gain favor or advantage.",
+    "Overly oily or slick appearance or texture, often indicating insincerity."
+  ],
+  "undaunted": [
+    "Not intimidated or discouraged; unwavering in one's purpose or determination despite difficulties, obstacles, or opposition."
+  ],
+  "undecided": [
+    "Unable to make a decision or reach a conclusion due to uncertainty, lack of information, or conflicting opinions.",
+    "Not committed to any particular course of action, position, or opinion; still considering all options or possibilities.",
+    "In politics, referring to individuals who have not yet declared support for a candidate or party in an election."
+  ],
+  "undeniably": [
+    "In a way that cannot be denied or disputed; clearly; indisputably."
+  ],
+  "underdog": [
+    "A person or team expected to lose or perform poorly in a competition, often because of perceived inferiority or disadvantages compared to their opponents.",
+    "A term used to describe someone who is less favored or supported in a situation due to being considered weaker or less capable than others involved."
+  ],
+  "underestimate": [
+    "To estimate something as being less important, significant, or valuable than it actually is.",
+    "To calculate or judge something to be smaller, lower, or less than its actual amount, value, or worth.",
+    "To have an inaccurately low opinion of the abilities, potential, or competence of a person or thing."
+  ],
+  "underlying": [
+    "Forming the basis or foundation of something; fundamental",
+    "Lying concealed or hidden beneath the surface; latent",
+    "Serving as a cause, reason, or explanation for something; underpinning",
+    "Existing but not yet manifested or apparent; potential"
+  ],
+  "undernourished": [
+    "Experiencing a lack of proper nutrition, often leading to poor health, weakness, and weight loss in individuals or populations."
+  ],
+  "undesirable": [
+    "Not wanted, favorable, or desirable; unpleasant or unacceptable."
+  ],
+  "undoubtedly": [
+    "Certainly; without a doubt; beyond question.",
+    "In a manner leaving no room for uncertainty or doubt; assuredly.",
+    "Without hesitation or question; of course."
+  ],
+  "undress": [
+    "To remove one's clothing, typically as a preparation for changing into other garments or for going to bed.",
+    "To reveal or disclose something that was previously hidden or kept secret.",
+    "(In sports) To take off an athlete's uniform or protective gear after an event or practice session."
+  ],
+  "undulated": [
+    "Characterized by a series of wavelike forms or ridges; having an uneven, wavy surface or appearance.",
+    "To move or cause to move in a series of gentle waves or ripples.",
+    "(Of land) to have a rolling or undulating topography with gentle rises and falls."
+  ],
+  "undulating": [
+    "Characterized by a series of waves, rises, or falls, creating a wavy or hilly appearance or surface; rolling or uneven.",
+    "Varying continuously in value, amount, intensity, etc.; oscillating.",
+    "Moving or changing continually, with no definite pattern or direction.",
+    "Describing speech or writing that is characterized by frequent changes in pitch or tone."
+  ],
+  "unduly": [
+    "In an excessive or unreasonable manner; disproportionately."
+  ],
+  "uneasy": [
+    "Feeling anxious, worried, or uncomfortable in a situation.",
+    "Not settled or at ease in one's mind or emotions.",
+    "Causing discomfort or nervousness; agitating.",
+    "Hard to handle or manage due to its unstable nature."
+  ],
+  "unenforceable": [
+    "Impossible to enforce; not legally binding or valid due to being against public policy, vague, or unreasonably difficult to apply.",
+    "A law, agreement, or contract that cannot be enforced by legal means because it is considered invalid, unfair, or unjustifiable under the law."
+  ],
+  "unerringly": [
+    "In a way that is free from mistakes or errors; accurately and consistently."
+  ],
+  "unexpected": [
+    "Surprising; not expected or planned for; something that happens suddenly and can be a cause of shock, astonishment, or bewilderment",
+    "Unforeseen; something that was not predicted or calculated beforehand, often leading to an alteration in one's plans"
+  ],
+  "unfair": [
+    "Not following established rules, principles, or standards; biased or partial.",
+    "Unreasonable or unjust in terms of treatment or advantage.",
+    "Characterized by a lack of fairness or impartiality.",
+    "A situation where one person or group gains an unfair advantage over another.",
+    "Inconsistent with what is right, good, or honest; dishonest or corrupt."
+  ],
+  "unfeasible": [
+    "Impossible to carry out due to practical difficulties, limitations, or constraints."
+  ],
+  "unfeigned": [
+    "Sincere, genuine, or heartfelt; not feigned or pretended.",
+    "Not counterfeit or imitation; authentic.",
+    "Free from hypocrisy or insincerity; honest and true."
+  ],
+  "unflappable": [
+    "Capable of remaining calm, composed, and unruffled, especially in difficult or stressful situations.",
+    "Not easily upset or disturbed; composed and steady.",
+    "Resistant to shock, disturbance, or disconcertion; undisturbed or unshaken."
+  ],
+  "unforgettable": [
+    "Capable of being remembered or impossible to forget; unforgettable experiences, moments, or people leave a lasting impression.",
+    "So remarkable that it cannot be forgotten or easily described; something extraordinary and unforgettable leaves a deep impact on an individual.",
+    "Not able to be erased from one's memory; memories of unforgettable events are deeply ingrained in an individual's mind."
+  ],
+  "ungrateful": [
+    "Failing to show proper appreciation or thanks for what one has received.",
+    "Not reciprocating kindness or generosity shown by others.",
+    "Demonstrating a lack of thankfulness or consideration towards others' efforts or actions."
+  ],
+  "unicorns": [
+    "A mythical creature typically depicted as a horse with a single, pointed horn projecting from its forehead. These creatures often represent purity, magic, and goodness in folklore and literature.",
+    "(Finance) A private company that has achieved a valuation of over $1 billion, especially in the technology industry."
+  ],
+  "unicycle": [
+    "A vehicle that has one wheel and is used for transportation or recreation, ridden by one person standing on pedals attached to the wheel."
+  ],
+  "unidentified": [
+    "Not recognized, known, or established; not having been identified yet.",
+    "Having no distinct features that allow for recognition or classification.",
+    "Lacking a clearly defined or recognizable form, structure, or function.",
+    "Able to be described as something without having been given a name, label, or designation.",
+    "In the context of an unknown object or substance: not yet identified or categorized due to insufficient information or evidence."
+  ],
+  "uniform": [
+    "A style of clothing worn by members of an organization, group, or team to create a consistent appearance.",
+    "A standardized set of measurements or rules used in various fields such as science, engineering, or statistics for consistency and accuracy.",
+    "In mathematics, a function that produces the same output for each input within its domain."
+  ],
+  "uniformity": [
+    "The quality of being uniform, meaning having a consistent and unvarying character throughout, similar in all parts or aspects.",
+    "A state or condition where things are all the same or have no differences, uniform in form, appearance, style, etc.",
+    "Consistency or regularity in behavior, appearance, actions, beliefs, etc., lacking inconsistencies or variations."
+  ],
+  "unilateral": [
+    "Involving or affecting only one side, person, or organization.",
+    "Taking place between two parties, with only one party making a decision or taking action.",
+    "Relating to or done by one country or group without the participation of another.",
+    "Pertaining to a single organ or body part functioning independently."
+  ],
+  "unilaterally": [
+    "Involving or affecting only one side, party, or aspect; one-sided.",
+    "Done or carried out by one person or group to the exclusion of another; done alone or separately.",
+    "Taking effect or being enforced by a single country, organization, or individual without reciprocal action from the other side."
+  ],
+  "unimaginable": [
+    "Beyond the power of imagination to conceive or represent; incomprehensible, indescribable, or beyond the range of thought or feeling.",
+    "Too great or extreme to be thought of or imagined.",
+    "So great as to be difficult to believe or comprehend."
+  ],
+  "unimpeachable": [
+    "Not open to question, doubt, or dispute; beyond criticism; irrefutable.",
+    "Infallible; absolutely reliable or trustworthy; unquestionably excellent."
+  ],
+  "unimportant": [
+    "Not significant; of little consequence; insignificant.",
+    "Not essential; unnecessary; trivial."
+  ],
+  "uninhabited": [
+    "Not inhabited or lived in by people, animals, or organisms.",
+    "Empty, desolate, or lacking in inhabitants.",
+    "Vacant, abandoned, or unoccupied by any life forms."
+  ],
+  "unique": [
+    "Unlike anything else; one of a kind.",
+    "Having distinct features or qualities not found in other things; special or particular to an individual case.",
+    "Not typical, common, or ordinary; extraordinary or exceptional."
+  ],
+  "uniquely": [
+    "In a way that is unlike anything else; one-of-a-kind.",
+    "Being the only one of its kind in the world or in a particular context; without equal or comparable counterparts.",
+    "Characterized by being entirely different from others, especially when considered in terms of an exceptional quality, ability, or characteristic.",
+    "Exclusive to a specific individual, place, or situation; limited to only one instance or occurrence."
+  ],
+  "unison": [
+    "A situation in which people, groups, etc., agree completely with each other.",
+    "The simultaneous sounding of the same note by several singers or instruments, producing a full and rich harmony.",
+    "(Of two or more gears) having their teeth cut so that they mesh accurately when in engagement, as in a gearbox or differential mechanism."
+  ],
+  "unit": [
+    "A single item or component that is part of a larger group, system, or collection.",
+    "An amount or quantity of something, especially when used in measuring or counting.",
+    "A group of people or things organized together to work towards a common goal.",
+    "In mathematics, a symbol representing a value that remains constant throughout a calculation."
+  ],
+  "universal": [
+    "Relating to or affecting all members of a group or category, without exception.",
+    "Applicable to, being true for, or held by everyone.",
+    "Applying to everything or everywhere; worldwide.",
+    "Having a scope or application universal in nature.",
+    "Common or shared by all people, societies, etc.",
+    "Pertaining to the whole universe or world.",
+    "(Of an object) Intended for or available to everyone without restriction."
+  ],
+  "universe": [
+    "All of space and time and their contents, including planets, stars, galaxies, and all other forms of matter and energy.",
+    "A self-contained or abstract concept where events follow fixed laws.",
+    "The complete totality of existing things in a particular sphere or on a particular subject."
+  ],
+  "university": [
+    "A large institution of higher education providing a wide range of undergraduate and postgraduate courses.",
+    "An organization dedicated to the pursuit of knowledge through teaching, research, and community service.",
+    "A place where students can pursue degrees in various fields, including arts, sciences, humanities, engineering, medicine, etc."
+  ],
+  "unkind": [
+    "Unfeeling or uncompassionate in behavior or expression.",
+    "Lacking consideration for others; cruel or mean.",
+    "Not characterized by kindness or sympathy; harsh or brutal."
+  ],
+  "unleash": [
+    "Release from restraints, control, or confinement; let loose.",
+    "To bring forth or cause to emerge something previously held back; release.",
+    "To make use of a resource or potential in full force; exploit.",
+    "To set free or let go something that was previously suppressed; express."
+  ],
+  "unmitigated": [
+    "Complete, utter, or absolute; not at all reduced or modified.",
+    "Unrelenting or unremitting in intensity; extreme.",
+    "Undiluted or unrestrained; without any mitigating factors.",
+    "Without any qualification, moderation, or reduction; absolute."
+  ],
+  "unnecessary": [
+    "Not required or needed; superfluous.",
+    "Excessive or extravagant, especially in a way that is unwarranted.",
+    "Avoidable or unnecessary, often because of a lack of planning or foresight.",
+    "Not essential or important, often due to inefficiency or wastefulness."
+  ],
+  "unobtrusive": [
+    "Not attracting attention or notice; inconspicuous.",
+    "Quiet, reserved, or low-key in nature.",
+    "Characterized by understated design and minimal visual impact.",
+    "Able to carry out tasks without drawing attention or causing disruption."
+  ],
+  "unorthodox": [
+    "Not conforming to a particular convention, traditional belief, or established norm; innovative or original in approach.",
+    "In medicine, describing an unconventional treatment method not supported by scientific evidence or mainstream medical practice."
+  ],
+  "unprecedented": [
+    "Never having occurred or been experienced before; without a precedent or any previous instance."
+  ],
+  "unpredictable": [
+    "Subject to change or variation; capricious: The weather in this region is very unpredictable.",
+    "Difficult to foresee or anticipate; uncertain: His behavior was unpredictable, which made it hard for his friends to understand him.",
+    "Not easily classifiable or describable; indefinite: The situation was so chaotic that it was impossible to predict how things would turn out."
+  ],
+  "unpredictably": [
+    "In an unforeseeable manner; without a clear pattern, trend, or expectation.",
+    "Randomly; not following any consistent or predictable pattern.",
+    "Difficult to forecast or anticipate; lacking consistency or regularity in behavior or occurrence."
+  ],
+  "unprepossessing": [
+    "Not impressive or attractive in appearance, demeanor, or setting; plain, unassuming, or modest.",
+    "Difficult to judge or understand the character or intentions of someone; enigmatic or mysterious.",
+    "(Of a person) lacking charm, charisma, or personality; dull or uninteresting."
+  ],
+  "unpretentious": [
+    "Not displaying or characterized by arrogant or superficially impressive behavior, appearance, etc.; humble or modest; unassuming."
+  ],
+  "unqualified": [
+    "Not having the necessary knowledge, skills, or qualifications to do a job or task.",
+    "In its legal sense, not disqualified; unrestricted, as in an unqualified power of attorney.",
+    "In finance, not restricted by specific conditions or criteria, such as an unqualified audit opinion.",
+    "In certain contexts, completely or utterly; used for emphasis or intensity, often followed by an adjective (e.g., unqualified success)."
+  ],
+  "unravel": [
+    "To undo or untie something that has been tied, knotted, or woven together; to undo the interlocking of threads, fibers, or strands, resulting in the separation of these components.",
+    "To disentangle or disassemble something complex, such as a problem or theory, by breaking it down into its constituent parts for analysis or understanding.",
+    "To reveal or explain the underlying structure or workings of something previously mysterious, complex, or obscure; to demystify or clarify.",
+    "To disclose or make known the details or facts of a situation, event, or story through careful investigation or scrutiny.",
+    "To describe or narrate an event or sequence of events in detail, often from beginning to end."
+  ],
+  "unraveling": [
+    "The process of unwinding, untangling, or disentangling something, such as a knot, a tangle, or a complex situation.",
+    "The act of discovering the truth, origin, or nature of something by analyzing or investigating it.",
+    "(Science) A process in which a molecule, protein, or other structure is broken down into its constituent parts, such as through denaturation or hydrolysis."
+  ],
+  "unrequited": [
+    "Not returned, reciprocated, or acknowledged; specifically, feeling love that is not shared by another person.",
+    "Not having a corresponding amount in return; especially relating to feelings of admiration or affection.",
+    "Not required or needed, as in a specific situation or context.",
+    "Not given or granted, as in response to a request or plea."
+  ],
+  "unruffled": [
+    "Calm and composed, especially in difficult or stressful situations.",
+    "Not disturbed, upset, or disordered; tranquil.",
+    "(Of a surface) smooth and undisturbed by waves or currents; placid."
+  ],
+  "unsanitary": [
+    "Involving or causing uncleanliness, contamination, or the spread of disease.",
+    "Relating to conditions that promote the growth of bacteria or other pathogens, often due to poor hygiene practices or lack of cleaning.",
+    "Lacking proper cleanliness or health standards, which can result in negative consequences for people and the environment."
+  ],
+  "unscrupulous": [
+    "Lacking moral principles; acting without conscience or regard for others; dishonest or deceitful in achieving one's goals."
+  ],
+  "unseen": [
+    "Not seen; invisible, hidden from view.",
+    "Undetected or unknown by others; unnoticed.",
+    "Not experienced, witnessed, or perceived before; unexperienced.",
+    "Not subject to the senses or intellect; beyond comprehension or understanding."
+  ],
+  "unshackled": [
+    "Free from restraints, confinement, or oppression.",
+    "Unrestricted in thought, expression, or action; liberated.",
+    "Unburdened by obligations or responsibilities.",
+    "No longer constrained by conventional thinking or ideas.",
+    "No longer held back by fear or self-doubt."
+  ],
+  "unsuccessful": [
+    "Not achieving a particular aim or objective, often used to describe an outcome or situation where something didn't work out as intended.",
+    "(Of a person) failing to achieve their goals or ambitions.",
+    "(Of an action, event, or venture) not leading to the desired outcome or result."
+  ],
+  "untenable": [
+    "Not able to be defended, maintained, or justified.",
+    "Impossible to continue due to a lack of support or validity.",
+    "Unreasonable and unsustainable, often due to inconsistencies or contradictions in arguments or positions."
+  ],
+  "unveil": [
+    "Reveal something previously hidden or unknown, such as a new statue or a secret.",
+    "Present (a product, service, etc.) to the public for the first time.",
+    "Make known or reveal the identity or nature of."
+  ],
+  "unveiled": [
+    "Revealed or made visible after being covered, hidden, or concealed.",
+    "Made public or known after being kept secret or private.",
+    "Removed or lifted from a surface or location, exposing what was underneath or hidden.",
+    "Exposed or brought to light in an event or ceremony, such as a monument or statue."
+  ],
+  "unwavering": [
+    "Steadfast, firm, and unchanging in purpose, belief, loyalty, or determination; not swayed by doubt, opposition, or distractions.",
+    "(No definition provided)",
+    "(No definition provided)"
+  ],
+  "unyielding": [
+    "Not easily bendable or changeable; inflexible.",
+    "Resistant to persuasion, pressure, or influence; stubborn.",
+    "Unwavering in opinion or belief; uncompromising."
+  ],
+  "unyieldingly": [
+    "Refusing to change, give in, or bend under pressure or circumstances.",
+    "Persisting stubbornly or obstinately in a belief, course of action, etc., regardless of opposition or criticism.",
+    "Characterized by firm determination and resistance to change or compromise."
+  ],
+  "up": [
+    "In a higher position, level, or place; elevated in rank, status, or importance (e.g., \"He moved up in the company\").",
+    "At a later time or date; later on or afterward (e.g., \"We'll discuss this issue up when everyone is present\").",
+    "At an increased speed, level, or degree (e.g., \"The temperature went up rapidly\").",
+    "Toward the source of sound, light, or heat (e.g., \"Walk up closer to the fire\").",
+    "In an upward direction; ascending, climbing, or rising (e.g., \"She ran up the stairs in a hurry\").",
+    "To increase the volume, level, or intensity of something (e.g., \"Turn up the music\").",
+    "At or to a higher point, place, or degree (e.g., \"The store is up on Main Street\")."
+  ],
+  "upbringing": [
+    "The process of raising, nurturing, and educating a child from infancy to adulthood by their parents or guardians, influencing their character and behavior.",
+    "The environment, experiences, and values instilled in an individual during their early years, shaping their beliefs, attitudes, and behavior as they grow older."
+  ],
+  "upheaval": [
+    "A sudden, major change or disturbance in a situation, organization, or environment.",
+    "The act of overturning, upsetting, or destroying something established or traditional.",
+    "An uprising, revolution, or violent overthrow of an existing system or government."
+  ],
+  "upon": [
+    "On (something); over (something)",
+    "During; while (something is happening)",
+    "Immediately after (an event or action) has occurred",
+    "In the presence of (someone or something)",
+    "At a certain point or stage in (a process or development)"
+  ],
+  "upright": [
+    "In a vertical position; standing, sitting, or positioned straight up: The bookshelf is upright against the wall.",
+    "Morally correct or proper; honest or honorable: She always tried to act with an upright character.",
+    "Erect or standing on one's feet; not lying down: After his nap, the cat stood upright again.",
+    "Used for a musical instrument like a cello or violin, held in position between the player's legs with the strings parallel to the floor: The musician positioned her upright cello for playing."
+  ],
+  "upscale": [
+    "Pertaining to something that has been improved, upgraded, or made more luxurious, often in terms of quality or status.",
+    "Involving a move from a less expensive area to a more expensive one; related to social climbing or upward mobility.",
+    "Relating to a commercial establishment offering high-quality, pricey products or services, typically in an exclusive setting."
+  ],
+  "upsetting": [
+    "Causing great distress, anxiety, or emotional discomfort.",
+    "Disruptive or chaotic, causing confusion or disorder.",
+    "Offensive or objectionable in nature; upsetting to one's sensibilities.",
+    "Inconvenient or troublesome; interrupting normal routines or activities."
+  ],
+  "upshot": [
+    "The result or outcome of something, typically a process or event; the end or consequence.",
+    "The final state or condition reached after a sequence of events.",
+    "A summary or conclusion drawn from a series of events.",
+    "An intended or unintended effect or influence, often unpredictable.",
+    "(In law) The final decision or judgment given in a case."
+  ],
+  "upstage": [
+    "To overshadow or outshine someone, typically in a performance or production where multiple people are involved.",
+    "To physically move to a higher position on stage, either intentionally or accidentally.",
+    "To take attention away from someone else, often with the intent of making oneself more prominent.",
+    "To surpass or exceed something in quality or importance."
+  ],
+  "urgent": [
+    "Extremely important, needing immediate attention or action.",
+    "Relating to something that must be done quickly due to its importance or time-sensitivity.",
+    "Concerning a matter of great urgency; requiring swift response or resolution."
+  ],
+  "us": [
+    "A plural pronoun that refers to the speaker and one or more others, used as the subject of a verb or the object of a preposition. Example: \"We went to the store, and then we went home.\""
+  ],
+  "usage": [
+    "The act of using or employing something, especially according to the normal or proper manner.",
+    "The frequency with which a particular word or expression is used, especially in formal contexts such as language and literature.",
+    "The customary practice or habitual behavior; the way that a thing is commonly used or done.",
+    "The use of something for a specific purpose or according to certain requirements.",
+    "A specific instance or example of how something is used.",
+    "An approximate amount, measure, or estimate based on previous examples."
+  ],
+  "use": [
+    "To employ, apply, or utilize something for a specific purpose or task.",
+    "To take advantage of, exploit, or make full use of something.",
+    "To operate or work with a particular object, tool, or device.",
+    "To consume a substance, usually in moderation or as intended.",
+    "To put into practice, implement, or follow a method or strategy."
+  ],
+  "usefulness": [
+    "The quality of being practical, helpful, or effective in achieving a particular purpose or objective.",
+    "The ability to be utilized for a specific task or purpose.",
+    "The capacity to serve a useful function or provide assistance."
+  ],
+  "usually": [
+    "In general practice or on most occasions; ordinarily; commonly: \"People usually eat breakfast in the morning.\"",
+    "In accordance with what is typical or expected, within a specific context: \"The store is usually open from 9 am to 5 pm.\"",
+    "Generally; for the most part: \"The weather in this region is usually warm and sunny.\""
+  ],
+  "utensil": [
+    "An object, especially a piece of cutlery or kitchen equipment, used to handle food or to carry out various tasks in cooking, serving, or eating."
+  ],
+  "utensils": [
+    "Objects used to handle, prepare, or serve food, such as knives, forks, spoons, and spatulas."
+  ],
+  "utilitarian": [
+    "Relating to, designed for, or characterized by practicality, efficiency, or effectiveness rather than aesthetic considerations.",
+    "Of or relating to utilitarianism, a philosophical and moral theory that emphasizes the greatest good for the greatest number of people as the basis for moral decisions.",
+    "Involving or promoting utility, which is the quality of being useful, practical, or effective in achieving a particular purpose or end."
+  ],
+  "utopia": [
+    "An ideal place, community, or society where everything is perfect and exactly as one would wish it to be.",
+    "A perfect world that exists only in the imagination or creative works of literature, often used to explore societal ideals and human nature."
+  ]
+}

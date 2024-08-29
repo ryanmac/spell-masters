@@ -1,7 +1,7 @@
 // src/components/AssessmentMode.tsx
 'use client'
 
-import React, { useState, useEffect, useCallback, useRef } from 'react'
+import React, { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import { useWord } from '@/hooks/useWord'
 import { useMisspelling } from '@/hooks/useMisspelling'
 import { useTTS } from '@/hooks/useTTS'
@@ -9,7 +9,7 @@ import { useUser, User } from '@/contexts/UserContext'
 import { useRouter } from 'next/navigation'
 import { scheduleWordForReview, updateReviewSchedule } from '@/utils/spacedRepetition'
 import { getStarRating } from '@/utils/starRating'
-import { FaVolumeUp } from 'react-icons/fa'
+import { FaVolumeUp, FaInfo, FaVolumeMute } from 'react-icons/fa'
 
 type AssessmentType = 'core' | 'bonus' | 'comprehensive';
 
@@ -19,67 +19,95 @@ interface AssessmentResults {
   incorrectAnswers: IncorrectAnswer[];
   correctWords: string[];
   averageTimePerWord: number;
+  predefinedWords?: string[];
 }
 
 interface AssessmentModeProps {
-  levelId: string
-  assessmentType: AssessmentType
-  sublevel?: number
-  onComplete?: (results: AssessmentResults) => void
+  levelId: string;
+  assessmentType: AssessmentType;
+  sublevel?: number;
+  onComplete?: (results: AssessmentResults) => void;
+  predefinedWords?: string[];
+  comprehensiveType?: 'core' | 'bonus';
 }
 
 interface IncorrectAnswer {
-  word: string
-  userChoice: string
-  correctChoice: string
+  word: string;
+  userChoice: string;
+  correctChoice: string;
 }
 
-const ALWAYS_SHOW_CORRECT_FIRST = false
+const ALWAYS_SHOW_CORRECT_FIRST = true
 const WORDS_PER_ASSESSMENT = 20
 
-const AssessmentMode: React.FC<AssessmentModeProps> = ({ levelId, assessmentType, sublevel = 1, onComplete }) => {
-  console.log('AssessmentMode rendered with props:', { levelId, assessmentType, sublevel, onComplete: !!onComplete });
-  const [words, setWords] = useState<string[]>([])
-  const [currentWordIndex, setCurrentWordIndex] = useState(0)
-  const [options, setOptions] = useState<string[]>([]);
-  const [allOptions, setAllOptions] = useState<string[][]>([]);
-  const [score, setScore] = useState(0)
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
-  const [showFeedback, setShowFeedback] = useState(false)
-  const [assessmentComplete, setAssessmentComplete] = useState(false)
-  const [totalTime, setTotalTime] = useState(0)
-  const [startTime, setStartTime] = useState(Date.now())
-  const [incorrectAnswers, setIncorrectAnswers] = useState<IncorrectAnswer[]>([])
-  const [correctWords, setCorrectWords] = useState<string[]>([])
-  const navigationOccurredRef = useRef(false)
+const AssessmentMode = React.memo<AssessmentModeProps>(({
+  levelId,
+  assessmentType,
+  sublevel = 1,
+  onComplete,
+  predefinedWords,
+  comprehensiveType = 'core',
+}) => {
+  console.log('AssessmentMode rendered with props:', { levelId, assessmentType, sublevel, predefinedWords, comprehensiveType });
+
+  // States
+  const [words, setWords] = useState<string[]>([]);
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [score, setScore] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+  const [showFeedback, setShowFeedback] = useState(false);
+  const [assessmentComplete, setAssessmentComplete] = useState(false);
+  const [totalTime, setTotalTime] = useState(0);
+  const [startTime, setStartTime] = useState(Date.now());
+  const [incorrectAnswers, setIncorrectAnswers] = useState<IncorrectAnswer[]>([]);
+  const [correctWords, setCorrectWords] = useState<string[]>([]);
+  const navigationOccurredRef = useRef(false);
   const [exampleSentence, setExampleSentence] = useState<string>("_____");
-  const [definition, setDefinition] = useState<string>("_____");
+  const [definition, setDefinition] = useState<string[] | "_____">("_____");
   const [isCollapsed, setIsCollapsed] = useState(true);
+  const [autoSpeak, setAutoSpeak] = useState(false);
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
+
+  const { wordInfo } = useWord(words[currentWordIndex] || '');
+  const { generateMisspellings } = useMisspelling();
+  const { speak, stop, speaking } = useTTS();
+  const { user, updateUserProgress, updateLevelProgress } = useUser();
+  const router = useRouter();
+  const progress = ((currentWordIndex + 1) / words.length) * 100;
+
+  const answeredRef = useRef(false);
+
   const toggleCollapse = () => setIsCollapsed(!isCollapsed);
-
-  const { wordInfo } = useWord(words[currentWordIndex] || '')
-  const { generateMisspellings } = useMisspelling()
-  const { speak, stop, speaking } = useTTS()
-  const { user, updateUserProgress, updateLevelProgress } = useUser()
-  const router = useRouter()
-
-  const answeredRef = useRef(false)
+  const toggleAutoSpeak = useCallback(() => {
+    setAutoSpeak(prev => !prev);
+    if (!autoSpeak && words[currentWordIndex]) {
+      speak(words[currentWordIndex]);
+    }
+  }, [autoSpeak, words, currentWordIndex, speak]);
 
   const fetchWords = useCallback(async () => {
+    console.log('Fetching words for level:', levelId);
+    if (!isInitialLoad) {
+      console.log('Not initial load, returning...');
+      return;
+    }
     try {
       setIsLoading(true);
       setError(null);
-  
-      // Ensure the sublevel is correctly used in the API call
-      const response = await fetch(`/api/words?level=${levelId}&type=${assessmentType}&sublevel=${sublevel}&count=${WORDS_PER_ASSESSMENT}`);
+      console.log('Fetching words from API...');
+      const challengingWords = predefinedWords || user?.challengingWords || [];
+      const wordCount = assessmentType === 'comprehensive' ? 30 : WORDS_PER_ASSESSMENT;
+      const response = await fetch(`/api/words?level=${levelId}&type=${assessmentType}&sublevel=${sublevel}&count=${wordCount}&challengingWords=${encodeURIComponent(JSON.stringify(challengingWords))}`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const data = await response.json();
+      console.log('Received data from API:', data);
       if (data.words && data.words.length > 0) {
         setWords(data.words);
+        setIsInitialLoad(false);
       } else {
         throw new Error('No words received from the server');
       }
@@ -87,141 +115,104 @@ const AssessmentMode: React.FC<AssessmentModeProps> = ({ levelId, assessmentType
       console.error('Error fetching words:', error);
       setError('Failed to load words. Please try again.');
     } finally {
+      console.log('Setting isLoading to false');
       setIsLoading(false);
     }
-  }, [levelId, assessmentType, sublevel]);
+  }, [levelId, assessmentType, sublevel, user, isInitialLoad, predefinedWords]);
 
-  useEffect(() => {
-    fetchWords()
-  }, [fetchWords])
-
-  const fetchExampleSentence = useCallback(async (word: string) => {
+  const fetchWordData = useCallback(async (word: string) => {
+    console.log('Fetching word data for:', word);
     try {
-      const response = await fetch(`/api/sentences?word=${word}`);
+      const response = await fetch(`/api/word-data?word=${word}`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const data = await response.json();
-      return data.sentence || "_____";
+      return {
+        sentence: data.sentence || "_____",
+        definition: Array.isArray(data.definitions) && data.definitions.length > 0 ? data.definitions : ["Undefined: No definition available"],
+      };
     } catch (error) {
-      console.error('Error fetching example sentence:', error);
-      return "_____";
+      console.error('Error fetching word data:', error);
+      return {
+        sentence: "_____",
+        definition: ["Undefined: No definition available"],
+      };
     }
   }, []);
 
-
-  useEffect(() => {
-    if (wordInfo && wordInfo.word) {
-      fetchExampleSentence(wordInfo.word).then(sentence => {
-        setExampleSentence(sentence);
-      });
+  const generateOptions = useCallback((word: string) => {
+    const misspellings = generateMisspellings(word, 3);
+    let answerOptions = [word, ...misspellings];
+    if (!ALWAYS_SHOW_CORRECT_FIRST) {
+      answerOptions = answerOptions.sort(() => Math.random() - 0.5);
     }
-  }, [wordInfo, fetchExampleSentence]);
+    return answerOptions;
+  }, [generateMisspellings]);
+
+  const options = useMemo(() => {
+    if (words.length > 0 && currentWordIndex < words.length) {
+      return generateOptions(words[currentWordIndex]);
+    }
+    return [];
+  }, [words, currentWordIndex, generateOptions]);
 
   const speakSentence = (sentence: string, word: string) => {
-    // replace the empty space in the sentence with the word
     sentence = sentence.replace(/_____/g, word);
     const utterance = new SpeechSynthesisUtterance(sentence);
     window.speechSynthesis.speak(utterance);
   };
 
-  const fetchDefinition = useCallback(async (word: string) => {
-    try {
-      const response = await fetch(`/api/definitions?word=${word}`);
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      const data = await response.json();
-      return data.definition || "_____";
-    } catch (error) {
-      console.error('Error fetching definition:', error);
-      return "_____";
-    }
-  }, []);
-
-  useEffect(() => {
-    if (wordInfo && wordInfo.word) {
-      fetchDefinition(wordInfo.word).then((definition) => {
-        // The API returns results as an array of strings
-        setDefinition(definition);
-      });
-    }
-  }, [wordInfo, fetchDefinition]);
-
-  useEffect(() => {
-    if (words.length > 0) {
-      const newAllOptions = words.map(word => {
-        const misspellings = generateMisspellings(word, 3);
-        let answerOptions = [word, ...misspellings];
-        if (!ALWAYS_SHOW_CORRECT_FIRST) {
-          answerOptions = answerOptions.sort(() => Math.random() - 0.5);
-        }
-        return answerOptions;
-      });
-      setAllOptions(newAllOptions);
-      setOptions(newAllOptions[currentWordIndex] || []);
-      setStartTime(Date.now());
-      answeredRef.current = false;
-    }
-  }, [words, currentWordIndex, generateMisspellings]);
-
   const handleAnswer = useCallback((selectedOption: string) => {
-    if (answeredRef.current) return
-    answeredRef.current = true
-
-    setSelectedAnswer(selectedOption)
-    setShowFeedback(true)
-    const endTime = Date.now()
-    const timeTaken = (endTime - startTime) / 1000
-    setTotalTime(prevTotal => prevTotal + timeTaken)
-
-    const isCorrect = selectedOption === words[currentWordIndex]
+    console.log('handleAnswer called with:', selectedOption);
+    if (answeredRef.current) return;
+    answeredRef.current = true;
+  
+    setSelectedAnswer(selectedOption);
+    setShowFeedback(true);
+    const endTime = Date.now();
+    const timeTaken = (endTime - startTime) / 1000;
+    setTotalTime(prevTotal => prevTotal + timeTaken);
+  
+    const isCorrect = selectedOption === words[currentWordIndex];
     if (isCorrect) {
-      setScore(prevScore => prevScore + 1)
-      setCorrectWords(prev => [...prev, words[currentWordIndex]])
-      // Remove the word from challengingWords if it was correct
-      if (user && user.challengingWords.includes(words[currentWordIndex])) {
-        updateUserProgress({
-          challengingWords: user.challengingWords.filter(word => word !== words[currentWordIndex])
-        })
-      }
+      setScore(prevScore => prevScore + 1);
+      setCorrectWords(prev => [...prev, words[currentWordIndex]]);
     } else {
       setIncorrectAnswers(prev => [...prev, {
         word: words[currentWordIndex],
         userChoice: selectedOption,
-        correctChoice: words[currentWordIndex]
-      }])
+        correctChoice: words[currentWordIndex],
+      }]);
     }
-
+  
     if (user) {
-      let updatedUser = updateReviewSchedule(user, words[currentWordIndex], isCorrect)
+      let updatedUser = updateReviewSchedule(user, words[currentWordIndex], isCorrect);
       if (!isCorrect) {
-        updatedUser = scheduleWordForReview(updatedUser, words[currentWordIndex])
+        updatedUser = scheduleWordForReview(updatedUser, words[currentWordIndex]);
       }
-      updateUserProgress(updatedUser)
+      updateUserProgress(updatedUser);
     }
-
-    // Delay moving to the next word to show feedback
+  
     setTimeout(() => {
-      setShowFeedback(false)
-      setSelectedAnswer(null)
+      setShowFeedback(false);
+      setSelectedAnswer(null);
       if (currentWordIndex < words.length - 1) {
-        setCurrentWordIndex(prevIndex => prevIndex + 1)
+        setCurrentWordIndex(prevIndex => prevIndex + 1);
       } else {
-        setAssessmentComplete(true)
+        setAssessmentComplete(true);
       }
-    }, 500)
+    }, 500);
   }, [currentWordIndex, startTime, words, user, updateUserProgress]);
 
   const handleSpeak = useCallback(() => {
     if (wordInfo) {
-      speak(wordInfo.word)
+      speak(wordInfo.word);
     }
-  }, [wordInfo, speak])
+  }, [wordInfo, speak]);
 
   // Ensure correct update of uniqueWordsMastered and level progress
   const handleAssessmentComplete = useCallback(() => {
-    console.log('handleAssessmentComplete called');
     if (assessmentComplete && user) {
       const starRating = getStarRating(score, words.length);
   
@@ -255,13 +246,6 @@ const AssessmentMode: React.FC<AssessmentModeProps> = ({ levelId, assessmentType
       };
 
       if (onComplete) {
-        console.log('Calling onComplete with results:', {
-          score,
-          totalQuestions: words.length,
-          incorrectAnswers,
-          correctWords,
-          averageTimePerWord: totalTime / words.length,
-        });
         onComplete({
           score,
           totalQuestions: words.length,
@@ -269,8 +253,6 @@ const AssessmentMode: React.FC<AssessmentModeProps> = ({ levelId, assessmentType
           correctWords,
           averageTimePerWord: totalTime / words.length,
         });
-      } else {
-        console.log('onComplete not provided, skipping');
       }
   
       updateUserProgress(updatedUserProgress);
@@ -278,8 +260,34 @@ const AssessmentMode: React.FC<AssessmentModeProps> = ({ levelId, assessmentType
   }, [assessmentComplete, user, updateLevelProgress, updateUserProgress, words, correctWords, score, totalTime, assessmentType, levelId, sublevel, incorrectAnswers, onComplete]);
 
   useEffect(() => {
+    console.log('AssessmentMode mounted, fetching words...');
+    fetchWords();
+  }, [fetchWords]);
+
+  useEffect(() => {
+    console.log('Words updated:', words);
+  }, [words]);
+
+  useEffect(() => {
+    if (words.length > 0 && currentWordIndex < words.length) {
+      const currentWord = words[currentWordIndex];
+      console.log('Fetching word data for:', currentWord);
+      fetchWordData(currentWord).then(({ sentence, definition }) => {
+        console.log('Word data fetched:', { sentence, definition });
+        setExampleSentence(sentence);
+        setDefinition(definition);
+      });
+  
+      setStartTime(Date.now());
+      answeredRef.current = false;
+      if (autoSpeak) {
+        speak(currentWord);
+      }
+    }
+  }, [words, currentWordIndex, autoSpeak, fetchWordData, speak]);
+
+  useEffect(() => {
     if (assessmentComplete && user && !navigationOccurredRef.current) {
-      console.log('Assessment complete effect triggered');
       handleAssessmentComplete();
       navigationOccurredRef.current = true;
     
@@ -292,9 +300,7 @@ const AssessmentMode: React.FC<AssessmentModeProps> = ({ levelId, assessmentType
         starRating: getStarRating(score, words.length),
       };
     
-      console.log('Assessment complete, calling onComplete');
       if (onComplete) {
-        console.log('Calling onComplete with results:', assessmentResults);
         onComplete(assessmentResults);
       }
     
@@ -311,13 +317,17 @@ const AssessmentMode: React.FC<AssessmentModeProps> = ({ levelId, assessmentType
         incorrectAnswers,
         correctWords,
         starRating: getStarRating(score, words.length),
-      }
-      router.push(`/performance-review?results=${encodeURIComponent(JSON.stringify(assessmentResults))}`)
+      };
+      router.push(`/performance-review?results=${encodeURIComponent(JSON.stringify(assessmentResults))}`);
     }
-  }, [correctWords, incorrectAnswers, router, score, totalTime, words.length])
+  }, [correctWords, incorrectAnswers, router, score, totalTime, words.length]);
+
+  useEffect(() => {
+    console.log('isLoading changed:', isLoading);
+  }, [isLoading]);
 
   if (isLoading) {
-    return <div className="text-center mt-8">Loading assessment...</div>
+    return <div className="text-center mt-8">Loading assessment...</div>;
   }
 
   if (error) {
@@ -331,68 +341,97 @@ const AssessmentMode: React.FC<AssessmentModeProps> = ({ levelId, assessmentType
           Try Again
         </button>
       </div>
-    )
+    );
   }
 
   if (words.length === 0) {
-    return <div className="text-center mt-8">No words available for this level and type.</div>
+    return <div className="text-center mt-8">No words available for this level and type.</div>;
   }
 
   return (
     <div className="max-w-2xl mx-auto p-4">
-      {/* <h2 className="text-2xl font-bold mb-4">Assessment Mode</h2> */}
-      <p className="mb-2">Question {currentWordIndex + 1} of {words.length}</p>
-      <p className="mb-4">Score: {score}</p>
+      {/* <p className="mb-2">Question {currentWordIndex + 1} of {words.length}</p> */}
+      <div className="w-full bg-gray-200 rounded-full h-4 mb-4">
+        <div
+          className="bg-blue-500 h-4 rounded-full"
+          style={{ width: `${progress}%` }}
+        />
+      </div>
+
+      <div className="flex justify-between items-center mb-4">
+        {/* <h2 className="text-2xl font-bold">Assessment Mode</h2> */}
+        <p className="mb-4">Score: {score}</p>
+        <button
+          onClick={toggleAutoSpeak}
+          className="text-white hover:text-gray-300"
+          aria-label={autoSpeak ? "Disable auto-speak" : "Enable auto-speak"}
+        >
+          {autoSpeak ? <FaVolumeUp size={24} /> : <FaVolumeMute size={24} />}
+        </button>
+      </div>
       {wordInfo && (
-        <div className="mb-4">
-          <div
-            className="text-lg font-semibold pb-3"
-            style={{ height: '8rem' }}
-          >
-            <h4>Example</h4>
-            <FaVolumeUp
-              size={24}
-              className="inline-block cursor-pointer pr-2"
-              onClick={() => speakSentence(exampleSentence, wordInfo.word)}
-            />
-            <span>{exampleSentence}</span>
-          </div>
-          <div
-            className="text-md font-semibold pb-3"
-          >
-            {definition.length > 0 ? (
-              <div>
-                <div onClick={toggleCollapse} style={{ cursor: 'pointer', marginBottom: '10px' }}>
-                  {isCollapsed ? '▼' : '▲'} Definition
-                </div>
-                {!isCollapsed && (
-                  <div>
-                    <ol>
-                      {Array.isArray(definition) ? (
-                        definition.map((d: string, index) => (
-                          <li key={index}>{d}</li>
-                        ))
-                      ) : (
-                        <p>No definitions available</p>
-                      )}
-                    </ol>
-                  </div>
-                )}
-              </div>
-            ) : (
-              <p>No definitions available</p>
-            )}
-          </div>
-          <button
-            onClick={handleSpeak}
-            disabled={speaking}
-            className={`mt-2 p-2 rounded-full transition-colors duration-200 ${
-              speaking ? 'text-gray-400' : 'text-white hover:text-blue-300'
+        <div className="mb-4 space-y-4">
+          <div 
+            className={`flex items-start cursor-pointer rounded p-1 transition-colors duration-200 ${
+              speaking ? 'opacity-50 cursor-not-allowed' : 'hover:bg-gray-700'
             }`}
-            aria-label={speaking ? 'Speaking' : 'Speak Word'}
+            onClick={speaking ? undefined : handleSpeak}
           >
-            <FaVolumeUp size={24} />
-          </button>
+            <div className="w-10 flex-shrink-0 flex justify-center">
+              <button
+                disabled={speaking}
+                className={`rounded-full transition-colors duration-200 ${
+                  speaking ? 'text-gray-400' : 'text-white'
+                }`}
+                aria-label={speaking ? 'Speaking' : 'Speak Word'}
+              >
+                <FaVolumeUp size={24} />
+              </button>
+            </div>
+            <span className="ml-2 text-md font-semibold">Speak</span>
+          </div>
+        
+          <div 
+            className="flex items-start cursor-pointer rounded p-1 transition-colors duration-200 hover:bg-gray-700"
+            onClick={toggleCollapse}
+          >
+            <div className="w-10 flex-shrink-0 flex justify-center">
+              <FaInfo size={24} className="text-white" />
+            </div>
+            <div className="ml-2 text-md font-semibold">
+              <div className="flex items-center">
+                <span>Define</span>
+                <span className="ml-2">{isCollapsed ? ' ' : '▲'}</span>
+              </div>
+            </div>
+          </div>
+          {!isCollapsed && definition.length > 0 && (
+            <div className="ml-12 mt-2">
+              {Array.isArray(definition) ? (
+                definition.map((d: string, index) => (
+                  <p key={index} className="mb-1">{d}</p>
+                ))
+              ) : (
+                <p>No definitions available</p>
+              )}
+            </div>
+          )}
+        
+          <div 
+            className="flex items-start cursor-pointer hover:bg-gray-700 rounded p-1 transition-colors duration-200"
+            onClick={() => speakSentence(exampleSentence, wordInfo.word)}
+            style={{ minHeight: '5em' }} // Add this line to set the minimum height
+          >
+            <div className="w-10 flex-shrink-0 flex justify-center">
+              <FaVolumeUp 
+                size={24} 
+                className="text-white"
+              />
+            </div>
+            <div className="ml-2 text-lg font-semibold">
+              <p>{exampleSentence}</p>
+            </div>
+          </div>
         </div>
       )}
       <div className="grid grid-cols-2 gap-4">
@@ -423,7 +462,9 @@ const AssessmentMode: React.FC<AssessmentModeProps> = ({ levelId, assessmentType
         </div>
       )}
     </div>
-  )
-}
+  );
+});
 
-export default AssessmentMode
+AssessmentMode.displayName = 'AssessmentMode';
+
+export default AssessmentMode;

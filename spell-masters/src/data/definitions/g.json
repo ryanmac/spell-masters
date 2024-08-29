@@ -1,0 +1,973 @@
+{
+  "gadget": [
+    "A small device, usually mechanical or electronic, designed to perform a specific function or task.",
+    "An invention or tool that is simple and often novel, used to solve everyday problems in an innovative way.",
+    "A term used to describe various types of devices and tools used for a wide range of purposes, from entertainment to practical applications."
+  ],
+  "galactic": [
+    "Pertaining to a galaxy, galaxies, or the study of them.",
+    "Relating to or involving a vast scale, like that of a galaxy, in terms of distance or scope.",
+    "Characterized by or having the properties of a galaxy, such as immense size and a multitude of stars.",
+    "Involving or relating to celestial bodies within a galaxy, such as stars, planets, and other astronomical objects."
+  ],
+  "galaxies": [
+    "A massive system consisting of stars, gas, dust, and dark matter, all held together by gravitational forces and bound by a common center, visible as a milky glow in the night sky. It is one of billions of galaxies that make up the observable universe."
+  ],
+  "gale": [
+    "A very strong wind, typically with speeds of at least 50-60 miles per hour (80-97 kilometers per hour), but possibly more intense; a storm."
+  ],
+  "gallantry": [
+    "Act of courage, boldness, or bravery in face of danger or difficulty",
+    "Courteous behavior toward women, shown by men",
+    "Chivalrous conduct, especially in the treatment of women",
+    "Brave and noble actions, typically involving personal risk to oneself",
+    "Displaying courage or generosity; acting in a heroic manner"
+  ],
+  "gallon": [
+    "A unit of liquid capacity measurement in the British Imperial system, equivalent to approximately four quarts or eight pints.",
+    "A unit of U.S. liquid capacity measurement, smaller than the British gallon and equivalent to roughly eight-and-a-half quarts or seventeen-and-a-half pints."
+  ],
+  "galore": [
+    "In great quantity, abundance, or number; plentifully."
+  ],
+  "galvanize": [
+    "To coat a surface with a protective layer of zinc, typically through electroplating or hot-dip processing, to prevent corrosion.",
+    "To stimulate or energize (someone) by presenting them with new ideas, challenges, or experiences.",
+    "To quickly move or make something happen, especially in response to an emergency situation."
+  ],
+  "galvanized": [
+    "Coated with a protective layer of zinc, typically to prevent rust or corrosion on metal surfaces.",
+    "Stimulated or motivated into action, especially in response to an urgent situation or challenge."
+  ],
+  "gambol": [
+    "To run or jump about in a lively, playful manner, often with joy or excitement.",
+    "(Noun) A light-hearted or playful act of running, jumping, or frolicking.",
+    "(Informal) To engage in merrymaking, mischief, or joking around."
+  ],
+  "game": [
+    "An amusement, pastime, or diversion played according to fixed rules; a competitive activity that requires skill, strategy, or luck.",
+    "A single round or bout of such an activity, as in tennis or poker.",
+    "A piece of software designed for entertainment on a computer or gaming console.",
+    "A form of sport, typically involving physical skill, adversarial competition, and governed by a set of rules.",
+    "An electronic or online platform where users interact to play various types of activities, often for social networking purposes.",
+    "A series of cards, pieces, or other objects that are used in playing a game, as chessmen, a deck of cards, or dominoes.",
+    "In sports and games, the score or points that each player or team has earned.",
+    "The players or teams involved in a game, especially in reference to their collective abilities or strategies."
+  ],
+  "games": [
+    "A form of entertainment, typically involving skill, challenge, and competition between two or more participants.",
+    "An activity done for enjoyment, often with a set of rules and objectives to be achieved.",
+    "A pastime that requires mental or physical effort, usually played in a structured manner.",
+    "A competitive event, such as a sports match or tournament, involving various contests."
+  ],
+  "gander": [
+    "A male goose, typically larger than a female goose (also known as a goose)."
+  ],
+  "gangplank": [
+    "A plank or narrow wooden bridge, typically long and movable, that provides access between a ship and the dock, pier, or shore.",
+    "Figuratively, a situation, action, or statement that connects two contrasting elements or ideas."
+  ],
+  "gap": [
+    "An opening or space between two things, such as a break in a fence or wall.",
+    "A difference or distance between two values, levels, or amounts, such as the difference in salary between two jobs.",
+    "A place where something is missing or has not yet been filled, such as an empty seat on a bus.",
+    "An area where there is no coverage or service, such as a dead zone in cellphone reception."
+  ],
+  "garbage": [
+    "Waste material consisting of inorganic substances discarded by people, such as food scraps, packaging, and other materials that are no longer useful or needed and are intended for disposal.",
+    "A group of things or ideas that are considered to be completely worthless or have no value; rubbish.",
+    "Unpleasant or absurd information, arguments, or suggestions; nonsense.",
+    "In computing, unwanted or corrupted data, such as temporary files, deleted items, or duplicates, that can clutter and slow down a computer's performance if not regularly cleaned up or removed."
+  ],
+  "garden": [
+    "An area of land near a house, where plants, flowers, and other greenery are cultivated for beauty or practical use.",
+    "A plot of ground used to grow vegetables, fruits, herbs, or other edible plants.",
+    "A public space set aside for the enjoyment of plants and landscaping features, typically in urban areas.",
+    "A metaphorical place representing a person's skills, knowledge, or achievements; their domain."
+  ],
+  "gargantuan": [
+    "Extremely large, enormous, or colossal in size or proportion.",
+    "Referring to something that is of immense importance, influence, or magnitude.",
+    "Relating to or representing a giant or huge creature or thing, as in literature or mythology."
+  ],
+  "gargle": [
+    "Swish water, a mouthwash, or other liquid in the mouth vigorously, especially to clean the mouth and throat or to relieve soreness after surgery.",
+    "Make a deep, reverberating sound, typically in reference to certain vocalizations made by birds or mammals."
+  ],
+  "gargoyle": [
+    "A grotesque carved figure, typically in the form of a human head or animal, that is situated at the gutter or eaves of a building to drain water away from it while also acting as a decorative element."
+  ],
+  "garment": [
+    "A piece of clothing made to cover or protect a person's body, typically worn on the upper part of the body such as a shirt, sweater, or blouse.",
+    "An outer covering for a statue or other work of art, often meant to protect it during transportation or storage.",
+    "A loose, informal term for any piece of clothing, including both everyday wear and special occasion attire."
+  ],
+  "garments": [
+    "Clothing, such as shirts, pants, dresses, or coats, worn for protection, warmth, decoration, or modesty."
+  ],
+  "garnish": [
+    "To decorate a dish, typically with edible items such as herbs, spices, fruits or vegetables."
+  ],
+  "garrison": [
+    "A body of troops stationed in a fortified place or area to guard it, especially when it is not their permanent base.",
+    "A group of people living together in a remote or isolated location.",
+    "A military post or station in a foreign country, used for the protection and support of friendly forces."
+  ],
+  "garrulous": [
+    "Talkative or excessively verbose, especially to the point of being difficult to interrupt or silence."
+  ],
+  "gas": [
+    "A substance that is composed of particles which are in a state of motion, not fixed in position like a solid or liquid; it expands to fill its container and can be compressed.",
+    "A mixture of gaseous substances found in the Earth's atmosphere, primarily composed of nitrogen, oxygen, and trace amounts of other elements and compounds.",
+    "A substance that becomes a gas when heated, such as water turning into steam or oil vaporizing.",
+    "A light, odorless, colorless, highly flammable, and toxic gas produced by the fermentation of certain materials, such as ethanol from yeast metabolism in fermentation processes.",
+    "A mixture of gases used for specific purposes like welding, cutting or heating, known as a shielding gas, or for creating an inert atmosphere, as in food storage."
+  ],
+  "gaseous": [
+    "Relating to, consisting of, or being gas; in a gaseous state",
+    "Made up of or filled with gas; gaseous substance",
+    "Having the properties of a gas; behaving like a gas",
+    "Gas-like in form or appearance; having gaseous characteristics"
+  ],
+  "gather": [
+    "To bring together or collect people, objects, or information in one place or at a specific time.",
+    "To assemble or form a group from individual parts.",
+    "To become concentrated or crowded together; to gather around something or someone.",
+    "To accumulate or collect resources such as knowledge, data, or experiences over time.",
+    "(In the context of weather) To come together in one place, forming clouds or storms.",
+    "(In the context of harvesting) To cut or gather plants, crops, or fruits from a field, garden, or orchard."
+  ],
+  "gave": [
+    "Past tense of the verb \"to give.\"",
+    "To transfer possession or control of something to someone or something else.",
+    "To bestow, confer, or impart a quality, characteristic, or ability.",
+    "To supply or provide something needed or desired.",
+    "In sports, to hit the ball with the edge of the blade or the end of the stick."
+  ],
+  "gaze": [
+    "The act of looking fixedly at someone or something, often for a significant amount of time.",
+    "A steady, unbroken look; a fixed, prolonged stare.",
+    "The appearance of the eyes when they are focused on an object or person."
+  ],
+  "gear": [
+    "A system of intermeshing gears that transmit motion and convert speed and direction between the engines and the wheels or other machinery in a vehicle or machine.",
+    "Equipment, especially tools or clothing, needed for a particular job or activity.",
+    "A set of musical selections arranged for a specific theme, event, or purpose.",
+    "(Slang) Clothing or accessories that are fashionable and popular at a given time."
+  ],
+  "generalization": [
+    "The act of forming a broad idea, belief, or statement based on specific instances or examples.",
+    "A conclusion drawn from a limited number of instances or examples, applied to other similar situations or cases.",
+    "The process of making something more general or less specific, often by removing details or features.",
+    "In machine learning and artificial intelligence, the ability for an algorithm to identify patterns or relationships in data based on a sample set, then apply those findings to new data."
+  ],
+  "generalize": [
+    "To form a general idea, concept, or statement based on specific instances or examples; to make something more general from particular cases.",
+    "To treat or regard all members of a group as having the same qualities or characteristics because of the behavior or attributes of some individuals in that group; to draw sweeping conclusions about an entire category based on limited data.",
+    "To express or describe something in general terms, without going into specific details or instances."
+  ],
+  "generate": [
+    "Create or produce something new, such as an idea, energy, or data, through a specific process or method.",
+    "Produce offspring or descendants in order to continue a species or family lineage.",
+    "Generate refers to the act of creating or generating electricity, usually via renewable sources like solar panels or wind turbines."
+  ],
+  "genteel": [
+    "Polite, refined, or socially respectable in manner or appearance.",
+    "Belonging to or characteristic of a gentle or upper class.",
+    "Marked by good breeding, culture, and manners."
+  ],
+  "gentle": [
+    "Moving or done in a mild, kind, or careful manner.",
+    "Showing tenderness or sympathy towards others.",
+    "Free from harshness, violence, or sudden change; tranquil.",
+    "Not having a strong effect or force; weak.",
+    "(Of weather) light rain, snow, etc., falling gently."
+  ],
+  "genuine": [
+    "Real, authentic, or not counterfeit; genuine articles are the actual ones, not fake or imitation.",
+    "True to one's nature, feelings, or beliefs; sincere and genuine expressions show real emotion or intent.",
+    "Genuine effort refers to a strong and serious attempt to achieve something.",
+    "(In sports) Playing in accordance with the rules, not cheating or breaking any rules; a genuine game is fair and honest."
+  ],
+  "geography": [
+    "The study of the Earth's physical features, political divisions, and cultural characteristics.",
+    "The spatial relationships between people, places, or events.",
+    "A branch of social science that deals with the locations of things on the Earth's surface.",
+    "A particular area or region, including its physical features, inhabitants, and culture.",
+    "The relationship between human activities and their impact on the environment."
+  ],
+  "geomantically": [
+    "Geomantically refers to a method of divination that uses the patterns and shapes found in soil samples to interpret messages or insights from the spirit world, often associated with geomancy as a form of fortune-telling or guidance."
+  ],
+  "gerbil": [
+    "A small, long-tailed rodent with a round body and short legs, native to the deserts of Africa and Asia.",
+    "An animal species belonging to the family Muridae, often kept as pets due to their gentle nature and entertaining behaviors."
+  ],
+  "geriatric": [
+    "Pertaining to, characterized by, or affecting the aged; relating to elderly individuals or their specific medical needs or treatments."
+  ],
+  "germ": [
+    "A very small living thing, like bacteria or a virus, that can cause disease when it gets into the body.",
+    "The basic unit of a plant or animal species, which can grow and reproduce.",
+    "The beginning or earliest stage of something, such as an idea or a plan."
+  ],
+  "germinal": [
+    "Pertaining to or occurring during the first month of life (as of an animal).",
+    "Relating to or denoting the early period of growth or development in a plant, organism, or society.",
+    "Referring to or designating the north celestial pole, especially when considered as a point around which the stars appear to revolve over the course of a year."
+  ],
+  "germinate": [
+    "To begin to grow and develop, often in reference to seeds sprouting into plants or spores developing into fungi.",
+    "To start or initiate the growth of something, such as a plan or project.",
+    "In biology, the process by which cells, tissues or organs grow and differentiate into new structures, often after being dormant for some time."
+  ],
+  "gerontology": [
+    "The study of aging process and related biological, psychological, social and cultural aspects in old age."
+  ],
+  "gesture": [
+    "A movement of the body, hands, or facial expressions used to express a thought or feeling without words, especially in order to convey information or instructions to others.",
+    "An action performed by someone as a way of indicating how they feel about something.",
+    "The act of making a specific movement with one's hand(s) or body to emphasize or illustrate something being said or done.",
+    "A symbolic or conventional sign or movement, typically one used in public ceremonies or by officials.",
+    "A sudden, energetic movement made to attract attention or indicate an intention."
+  ],
+  "get": [
+    "Obtain or acquire something, often by purchase or as a result of an action. For instance, \"I got a new bike for my birthday.\" or \"He gets home at 5 p.m. every day.\"",
+    "To achieve or reach a particular state or condition. For example, \"She managed to get over her fear of heights.\" or \"The company needs to get more customers to be successful.\"",
+    "To cause something to occur or happen. In other words, \"I got the dog to sit by using his favorite treat.\" or \"He got into an argument with his friend after making a rude remark.\"",
+    "To understand or grasp the meaning of something, often used when learning or receiving information. For example, \"After reading the instructions, I finally got how to use this new gadget.\" or \"It took me a while, but I eventually got the joke.\""
+  ],
+  "geyser": [
+    "A natural hot spring that periodically ejects a column of hot water and steam into the air, due to pressure buildup in underground reservoirs of heated water.",
+    "Any spring or fountain that erupts with a sudden force."
+  ],
+  "ghastly": [
+    "Extremely frightening, terrifying, or horrible in appearance; causing great fear or dread.",
+    "Causing or associated with strong feelings of horror or repulsion.",
+    "Marked by or characterized by extreme ugliness, grotesqueness, or unpleasantness."
+  ],
+  "ghetto": [
+    "A residential area where members of a particular ethnic or religious group are required to live, especially as a result of political or social pressures.",
+    "A section of a city where people of limited financial means live, often characterized by high crime rates and substandard living conditions.",
+    "In computer programming, a term used to describe an isolated environment for running untrusted code, intended to prevent security vulnerabilities."
+  ],
+  "ghost": [
+    "A supernatural being representing the spirit of a deceased person, which is said to appear to the living, often as a shadowy figure.",
+    "The spirit or soul of a deceased person.",
+    "To haunt or appear spectrally; to be a ghost.",
+    "An apparition or phantom, especially one that appears unexpectedly and mysteriously.",
+    "A person who looks or sounds like another, often used to imitate someone for deception.",
+    "A trace or remnant of something that has disappeared or been destroyed; a vestige.",
+    "In computer science, a replica or copy of data or software that is kept for backup or recovery purposes."
+  ],
+  "gibber": [
+    "To speak or write in a way that is unclear or difficult to understand, often due to excessive use of technical jargon or complex language.",
+    "A group of small, flat-topped hills or mounds, typically formed from sand and gravel.",
+    "(In Australia) An informal term for the red kangaroo (Macropus rufus)."
+  ],
+  "gibbering": [
+    "Speaking in a rapid, unintelligible, or incoherent manner; nonsense words or speech",
+    "Nervously or excitedly speaking in a jumbled and incomprehensible way; babbling",
+    "To utter inarticulate sounds or meaningless words as if insane or crazed"
+  ],
+  "gibberish": [
+    "Nonsense words or sounds that resemble language but have no meaning, often used in magic acts or for entertainment purposes.",
+    "Writing or speech that is unintelligible or difficult to understand due to the use of unfamiliar terms or language.",
+    "Information or content that is irrelevant, meaningless, or confusing, often encountered on the internet or social media."
+  ],
+  "gibe": [
+    "A light, usually mocking remark or jest directed at someone; tease or taunt.",
+    "A sail on a square-rigged ship; gaff-sail.",
+    "An obsolete spelling of 'jibe', meaning to be in agreement or harmony."
+  ],
+  "giddy": [
+    "Feeling dizzy, light-headed, or unsteady on one's feet.",
+    "Overexcited, silly, or not taking something seriously enough.",
+    "Excited and cheerful in an unrestrained manner.",
+    "Used to describe someone who is acting foolishly or recklessly due to a loss of balance or coordination."
+  ],
+  "ginger": [
+    "A spice derived from the dried rhizomes of the ginger plant, with a warm, fragrant flavor used in cooking and baking.",
+    "A reddish-brown color resembling the appearance of human hair or fur, often associated with the natural color of some animals like red foxes or cinnamon bears.",
+    "An informal term for a person with red or orange hair, typically with a fair complexion and freckles."
+  ],
+  "giraffe": [
+    "A tall, long-necked, and long-legged African mammal characterized by its distinctive coat patterns; it is the largest ruminant and the tallest terrestrial animal in the world."
+  ],
+  "girl": [
+    "A young female person, typically between childhood and adulthood.",
+    "An unmarried woman or girl.",
+    "A daughter; a girl in a family.",
+    "(Slang) A girl or young woman who is considered attractive or appealing."
+  ],
+  "girth": [
+    "The diameter, circumference, or thickness of something round or cylindrical.",
+    "The measurement around the middle or midsection of an animal or person, usually for fitting or sizing purposes.",
+    "A strap, rope, or band used to secure or tighten something, such as a saddle on a horse or a package during shipping."
+  ],
+  "girthiest": [
+    "The adjective form of \"girth\" referring to the greatest circumference or largest size, especially when compared to other similar objects or measurements. This word is often used in a humorous or exaggerated manner and is not commonly found in standard dictionaries."
+  ],
+  "gist": [
+    "The main point or central idea of a story, message or discussion."
+  ],
+  "give": [
+    "To present or hand over something, such as an object, to someone or something else without expecting anything in return.",
+    "To provide or supply something, like food or assistance, to another person or group without any direct reward or compensation.",
+    "To deliver a speech, performance, or presentation, offering information, entertainment, or instruction to others.",
+    "To yield, concede, or relinquish control, power, or authority to someone else.",
+    "To offer praise or congratulations to another person or group for their accomplishments or achievements."
+  ],
+  "glacial": [
+    "Relating to a glacier, ice, or cold temperatures.",
+    "Extremely slow-moving, as in \"a glacial pace.\"",
+    "Characterized by extreme slowness, as in decision making or progress.",
+    "Cold, distant, or unresponsive, as in interpersonal relationships or communication."
+  ],
+  "glacier": [
+    "A river or stream made of ice that flows very slowly downhill",
+    "A large body of ice on the ground, especially in a cold place like Antarctica or Greenland"
+  ],
+  "glad": [
+    "Feeling or expressing pleasure, happiness, or delight: \"I am glad you came to visit.\"",
+    "Willing or able to do something; ready or prepared: \"Glad to help you any way I can.\"",
+    "In a state of good health or well-being: \"The patient is now out of danger and feeling glad once again.\""
+  ],
+  "glamorous": [
+    "Characterized by attractiveness, charm, or beauty; stunningly attractive in appearance or style.",
+    "Causing awe or admiration; highly impressive or captivating.",
+    "Relating to or associated with glamour or glamorous people, places, or things."
+  ],
+  "glances": [
+    "To direct one's eyes briefly towards something or someone, often with a purpose of checking or observing.",
+    "To read quickly through a text, usually without understanding all the details.",
+    "To throw a quick look at something or someone.",
+    "(For software) A brief view or a peek at the content of a variable, file, or data structure.",
+    "(In programming) To take a momentary glimpse at memory locations containing variables or data values."
+  ],
+  "glare": [
+    "A strong, intense, and often unpleasant light that is difficult to look at, such as sunlight reflecting off a bright surface or the harsh lights in an operating room.",
+    "An angry, hard, and unyielding stare, as if daring someone to do something or not backing down from a challenge.",
+    "A focused, high-intensity light beam used for various purposes like spotlighting, photography, or signaling."
+  ],
+  "glaucescent": [
+    "Becoming or becoming coated with a glaucous film or substance, often due to moisture absorption or condensation."
+  ],
+  "glaucous": [
+    "Having a bluish-gray color, like the color of a pale gray eye or the color of a foggy day. This can refer to both objects and natural phenomena such as weather or water.",
+    "A term used in botany to describe the appearance of certain plants that have a waxy coating on their leaves or other parts, giving them a silvery-blue sheen."
+  ],
+  "glaze": [
+    "A smooth, shiny surface created by applying heat or chemicals to an object, such as a pottery piece or metal object.",
+    "A coating applied to food, like donuts or ham, made of sugar, icing, or other ingredients that creates a smooth, often shiny appearance.",
+    "The act of covering something with a layer of ice, frost, or snow.",
+    "In the context of electronics, a protective layer made up of various materials applied to surfaces to prevent damage from moisture or corrosion.",
+    "A thin, clear coating used in painting or art that creates a smooth, shiny finish on the surface underneath."
+  ],
+  "glazier": [
+    "A person who makes, installs, repairs, or creates glass panels in windows, doors, and other architectural features."
+  ],
+  "glean": [
+    "To collect or gather information, ideas, or knowledge from a source by careful examination or study.",
+    "To obtain food, especially crops, left in the field after the main harvest has been gathered.",
+    "To extract or derive meaning or information from something, such as a text, conversation, or situation."
+  ],
+  "glee": [
+    "A feeling of great happiness, joy, or delight, often expressed through laughter or singing.",
+    "A lively, spontaneous, and infectious expression of happiness, often seen in the faces or actions of people experiencing pleasure or amusement.",
+    "A song or chant expressing joy and merriment, typically sung by a group of people."
+  ],
+  "glib": [
+    "Superficially plausible but actually insubstantial, often referring to a shallow or slick explanation or response.",
+    "Fluent but not thoughtful; characterized by smoothness rather than substance.",
+    "Smooth and polished in speech or writing, typically without depth of meaning."
+  ],
+  "glide": [
+    "To move smoothly, effortlessly, and without sudden changes in direction, typically through the air or on an ice surface; to slide.",
+    "To move silently, steadily, and unobtrusively from one situation to another, especially as a means of achieving a goal; to maneuver."
+  ],
+  "glimmer": [
+    "A faint light, such as from a dim flame or stars in the night sky.",
+    "To shine feebly or intermittently, like an almost invisible flicker of light.",
+    "A hint or suggestion of something; a vague or faint indication.",
+    "To appear or come into view slightly or faintly."
+  ],
+  "glimpse": [
+    "A brief view or look at something; a quick sight of something partially hidden or momentarily visible.",
+    "A fleeting or partial understanding of something, such as a situation or concept.",
+    "To catch a sudden glimpse of something or someone; to see or notice for a momentary period.",
+    "(In photography) To take or capture a quick photo or snapshot of something."
+  ],
+  "glissade": [
+    "A smooth, sliding movement often used in skiing, ice-skating, or playing musical instruments.",
+    "(Skiing) The act of quickly moving down a slope by sliding on one ski while maintaining control with the other.",
+    "(Ice-skating) A gliding motion across the ice using a series of quick slides on one foot followed by the other.",
+    "(Music) A smooth, continuous transition between two notes or chords without stopping at the intermediate pitches."
+  ],
+  "glisten": [
+    "To shine or sparkle, often due to a layer of moisture or reflection on a surface.",
+    "To have a glistening appearance or quality; gleam.",
+    "(Slang) To be very happy or content, as if something shines within you."
+  ],
+  "glitter": [
+    "A sparkling appearance caused by the reflection of light off tiny, reflective particles; can refer to objects or surfaces with this quality.",
+    "Small pieces of metal, glass, or plastic that create a shimmering effect when scattered over a surface.",
+    "A verb form: To cause something to have a glittering appearance, often by scattering glitter on it or using products containing glitter.",
+    "In computing, a term used to describe a graphical user interface with a shiny, reflective appearance.",
+    "As a metaphor, glitter can refer to someone or something that is attention-grabbing or dazzling in their appearance or abilities."
+  ],
+  "glittery": [
+    "Shiny and covered with tiny, reflective pieces that make things look sparkly and festive.",
+    "Having a surface or appearance that is adorned with glitter, sequins, or other decorative elements that create a shimmering effect.",
+    "Possessing a radiant quality that evokes the appearance of twinkling or blinking lights, often associated with celebrations and special occasions."
+  ],
+  "gloom": [
+    "A dark and dismal atmosphere, often associated with overcast skies or heavily shaded areas.",
+    "A state of deep sadness, despair or depression.",
+    "An overall feeling of pessimism or gloomy outlook on life.",
+    "A situation or period of time characterized by misfortune or problems."
+  ],
+  "glop": [
+    "A thick, viscous liquid or semisolid substance, such as a sticky mixture or mess.",
+    "(Computing) A software error that causes a program to freeze or crash unexpectedly."
+  ],
+  "glorious": [
+    "Filled with great praise or honor; magnificent, splendid, or brilliant.",
+    "Marked by victory or triumph; victorious, successful, or impressive.",
+    "Characterized by radiant beauty or magnificence; resplendent, stunning, or awe-inspiring.",
+    "Associated with an exalted or divine being; sacred, holy, or heavenly.",
+    "Expressing or eliciting great admiration, reverence, or wonder; awe-inspiring, marvelous, or breathtaking."
+  ],
+  "glossy": [
+    "With a smooth, shiny surface that reflects light; having a high sheen.",
+    "Highly polished or reflective in appearance, often used to describe glossy magazines, brochures, or advertising materials.",
+    "Smooth and slick, especially when describing the fur or feathers of an animal."
+  ],
+  "glow": [
+    "A soft, gentle light emitted by certain objects, often caused by heat or electricity.",
+    "The radiant warmth one feels when they are loved or appreciated.",
+    "An inner feeling of happiness and contentment, often accompanied by a warm sensation.",
+    "A reddish or rosy flush on the face caused by cold weather, exercise, or emotion.",
+    "A shimmering light or haze that appears around certain objects in the dark."
+  ],
+  "glowering": [
+    "Frowning with a threatening or angry expression, typically while looking at someone in a menacing way.",
+    "A dark or stormy sky, often foreshadowing an impending event.",
+    "A gloomy or dismal atmosphere."
+  ],
+  "glue": [
+    "A substance used to join two surfaces together by sticking them firmly.",
+    "Something that holds people or things closely together, like a bond.",
+    "A thick, sticky substance made from animals or plants, used for joining materials together.",
+    "An adhesive material used in various applications such as crafting and manufacturing."
+  ],
+  "glum": [
+    "Expressing or showing sorrow, misery, or unhappiness; looking sad or dismal; gloomy in appearance or expression.",
+    "A state of feeling down, unhappy, or depressed.",
+    "Used to describe someone who is unresponsive or uncooperative.",
+    "Referring to a scene, situation, or event that is depressing, dreary, or dismal."
+  ],
+  "glutton": [
+    "A person who eats or drinks too much, especially to the point of overindulgence and often with no regard for health consequences.",
+    "Someone who consumes more food than is necessary or healthy for their body."
+  ],
+  "gnarl": [
+    "A twist or knot in wood, especially in a tree trunk or branch.",
+    "A difficult or complex problem to solve.",
+    "An old, gnarled tree with twisting branches and trunk.",
+    "To make something appear twisted, distorted, or gnarled.",
+    "A rough, uneven surface or texture, as of bark on a tree."
+  ],
+  "gnarled": [
+    "Twisted, bent, or contorted in a rough and irregular way; having a wrinkled or knotty appearance.",
+    "Difficult to understand or navigate; complicated."
+  ],
+  "gnat": [
+    "A small flying insect that belongs to the family of true flies, known for its annoying buzzing sound and its tendency to bite or sting humans and animals.",
+    "Any of various small winged insects in the order Diptera, including horseflies, midges, mosquitoes, gnats, and others.",
+    "A small, usually black, fly with a red eye, found mostly in North America, that lays its eggs on plants and feeds on plant nectar."
+  ],
+  "gnaw": [
+    "To gnaw: bite and nibble (something) slowly, typically because it is hard or resistant.",
+    "To gnaw away: gradually eat away something, especially by gnawing.",
+    "To gnaw on: hold and chew something with the teeth while thinking deeply about something."
+  ],
+  "go": [
+    "To move or proceed in a particular direction, especially by using physical effort or power.",
+    "To begin an activity, task, or journey.",
+    "To happen, occur, or take place; to be in progress or motion.",
+    "(In sports) To make a move or attempt, often with the intention of scoring points or reaching a goal.",
+    "A period of time, usually measured in hours, minutes, or seconds.",
+    "In programming, a command used to execute an instruction or set of instructions.",
+    "In finance, to increase or decrease the value of an asset.",
+    "(In informal contexts) To leave or depart from a place; often used as a polite way to ask someone to move or go away."
+  ],
+  "gold": [
+    "A yellow, shiny metal with the chemical symbol Au (from Latin aurum) and atomic number 79.",
+    "A precious metal that has been widely used in jewelry, coins, and other decorative items due to its luster, malleability, and resistance to corrosion.",
+    "A color often associated with wealth or luxury, as in \"a gold Rolls-Royce.\"",
+    "(obsolete) A term for the best part of something, as in \"the gold of his work.\""
+  ],
+  "golden": [
+    "Pertaining to, made of, or resembling gold; having a color similar to that of gold.",
+    "Exceptional in quality; considered the best or most desirable of its kind; as in \"a golden opportunity\" or \"a golden rule.\"",
+    "Relating to or characteristic of a time of prosperity or success; as in \"the golden age of exploration.\"",
+    "Symbolizing a prize, award, or victory; as in \"golden medals.\"",
+    "Denoting something that is yellow-orange in color, similar to gold; often used for descriptive purposes in literature and poetry."
+  ],
+  "golliwoggs": [
+    "No definition found for the word 'golliwoggs'. It appears to be a misspelling or an unknown term. Please check the spelling or provide additional context for clarification."
+  ],
+  "goods": [
+    "Merchandise, especially when it is being transported or sold.",
+    "Personal belongings; possessions.",
+    "(In legal context) Possessions of a deceased person.",
+    "Food and supplies for an expedition or journey."
+  ],
+  "goose": [
+    "A large bird with plump, flightless body and long neck, typically greyish-brown with white underparts, found in many parts of the world and often farmed for its meat and down feathers; a domestic goose is commonly called a \"geese\".",
+    "A person who is easily deceived or fooled, especially when considered collectively; also known as a 'dupe' or 'sucker'."
+  ],
+  "gore": [
+    "An irregular-shaped piece of meat, typically containing fat and connective tissue, that is often removed from a larger cut during butchering.",
+    "A section or division of something, such as a map, chart, or territory, that can be enlarged for closer examination.",
+    "To stab or pierce (someone) with a sharp weapon, typically an edged one."
+  ],
+  "gorgeous": [
+    "Strikingly beautiful, attractive, or pleasing to the senses",
+    "Large in quantity, extent, or amount; impressive",
+    "Extremely enjoyable or satisfying, especially as entertainment",
+    "Of or relating to a gorge or deep and narrow valley",
+    "(Obsolete) Exceeding what is common or ordinary"
+  ],
+  "gorilla": [
+    "A large, powerful, and intelligent ape found in Africa and part of Asia.",
+    "A slang term for an overbearing or intimidating person."
+  ],
+  "gospel": [
+    "A message or good news, often religious in nature.",
+    "The Christian faith and teachings based on the life, death, and resurrection of Jesus Christ.",
+    "A genre of music that expresses Christian beliefs and values through song."
+  ],
+  "gossip": [
+    "The act of exchanging rumors, half-truths, and idle talk about others, usually in a casual setting or among friends.",
+    "A person who habitually engages in such conversations.",
+    "Information revealed by one person to another, often consisting of rumors, half-truths, or intimate details about someone's life."
+  ],
+  "gossiped": [
+    "To talk about someone in a casual or unofficial manner, often revealing personal information or spreading rumors."
+  ],
+  "gossiping": [
+    "The act of exchanging rumors, information, or casual news about others, typically involving idle talk and unverified facts.",
+    "Engaging in informal conversation with friends or acquaintances about the personal lives and activities of others, often without any specific purpose beyond passing the time or sharing amusement."
+  ],
+  "gossipy": [
+    "Characterized by an interest in or enjoyment of discussing other people's activities, particularly those not directly relevant to one's own life.",
+    "Marked by a tendency to share or seek information about others' personal lives, often to the point of rumor-mongering or idle talk."
+  ],
+  "got": [
+    "Acquired, received, or obtained something, often referring to a possession or skill. For example, \"I got a new bike for my birthday.\" or \"She got really good at playing the piano.\"",
+    "To have come into being or existence. Example: \"The problem got solved after some time.\"",
+    "Passive voice of 'get', indicating an action that has been done to someone or something without specifying who did it. Example: \"I got wet in the rain.\"",
+    "Past tense of the verb 'go', meaning to travel, move or proceed to a place or point. Example: \"After lunch, we got to the park.\"",
+    "Informal past tense of 'get', used with linking verbs like be or become, implying an internal change in someone or something. Example: \"He got angry when he found out the truth.\"",
+    "In baseball and cricket, got refers to a batsman being out due to being hit by the ball. Example: \"The bowler got him out by hitting him on the pads.\""
+  ],
+  "government": [
+    "The body of people who lead a country or organization, often referred to as the \"executive branch\" which makes decisions and manages resources.",
+    "A system in place by which laws and rules are made, enforced, and upheld for the functioning of a society or nation.",
+    "The collection of agencies, institutions, and officials responsible for administering public affairs within a state or country."
+  ],
+  "governor": [
+    "A person who is in charge of a particular state, region, or country, responsible for making decisions that affect its citizens.",
+    "An official device in an engine or machine to regulate the speed or amount of fuel supplied."
+  ],
+  "gown": [
+    "A long, loose-fitting garment, typically worn by women on formal occasions such as weddings or ceremonies.",
+    "(in Christian denominations) A white robe worn by a deacon in some churches.",
+    "A flowing outer garment that was worn by women in ancient Rome and Greece.",
+    "In legal terms, the act of presenting a document to an authority for official recognition or registration."
+  ],
+  "gracious": [
+    "Showing polite and courteous behavior, especially to guests or those in your care.",
+    "Willingly giving more than what is asked for or expected; very generous.",
+    "Expressing an agreeable or amiable attitude, often in difficult situations.",
+    "Marked by an attractive, kindly, or pleasing appearance."
+  ],
+  "grade": [
+    "A level or step in a series of increasing difficulty, as on a ladder or scale, such as in education, sports, or skill development.",
+    "The relative quality of something according to specific criteria or standards, often used to determine the value or performance of products, services, or individuals.",
+    "A ranking assigned to students based on their academic performance in a school or educational institution.",
+    "A level of soil, rock, or other material determined by its composition and consistency.",
+    "A slope or incline, such as a steep hill or the angle between two surfaces."
+  ],
+  "gradient": [
+    "The slope of a curve or surface at any given point, expressing the rate of change between that point and a nearby one.",
+    "A scale or series of steps for climbing to higher ground or from higher ground to a lower level; a steep incline.",
+    "In mathematics, a line drawn on a graph to show how much something changes with respect to another thing over time.",
+    "In weather and climate, the difference in temperature, pressure, humidity, or other conditions between two points at different altitudes.",
+    "In computer graphics, an image or map representing the intensity of colors or brightness in a digital model of 3D space."
+  ],
+  "gradual": [
+    "Occurring, changing, or developing by small steps over a period of time; not sudden or immediate.",
+    "Involving or characterized by slow, steady progression or change.",
+    "Able to be perceived or measured in degrees or increments rather than all at once; incremental."
+  ],
+  "graduation": [
+    "The act of completing a course of study at a school, college, or university, which is usually marked by a ceremony or celebration where students receive their diplomas or degrees.",
+    "A ceremony that honors the completion of a course of study and marks the transition from being a student to entering the next phase of life."
+  ],
+  "graffiti": [
+    "Unauthorized markings, such as drawings or writings, on a wall or other surface in a public place."
+  ],
+  "graham": [
+    "A type of cracker or snack made from ground whole-grain flour, often used in bread or crust recipes for its nutty flavor and dense texture.",
+    "A surname originating from the name of a Scottish city, Graham, and commonly found in English-speaking countries.",
+    "(In computing) A programming language designed to be safe and secure by restricting the type of code that can be executed, often used for educational or introductory purposes."
+  ],
+  "grammar": [
+    "A set of rules that govern the structure, meaning, and arrangement of words and phrases in a language.",
+    "The study or analysis of these rules, often focusing on syntax (word order) and morphology (word formation).",
+    "In linguistics, the system of rules that defines how sentences are constructed and structured in a specific language, including elements such as nouns, verbs, pronouns, adjectives, and prepositions.",
+    "In education, the part of a curriculum devoted to teaching these rules and helping students understand the structure and conventions of written or spoken language."
+  ],
+  "grammarian": [
+    "A person who is knowledgeable in language structure, grammar, and usage; a linguist or language expert.",
+    "A member of an organization devoted to the study of grammar and proper usage of language.",
+    "One who gives lectures on grammar or teaches others about it."
+  ],
+  "grammatically": [
+    "Relating to the rules of a particular language, such as syntax, grammar, and punctuation, in writing or speech."
+  ],
+  "grand": [
+    "Of a high rank, importance, or quality; great.",
+    "Large in size, scope, or magnitude; extensive.",
+    "Showing splendid or majestic appearance; impressive.",
+    "Producing a powerful emotional effect; moving.",
+    "A unit of currency equivalent to 1000 smaller units; a large amount of money.",
+    "(In music) expressing magnificence, grandeur, or spaciousness; majestic."
+  ],
+  "granddaughter": [
+    "A female descendant of one's own child or a direct line ancestor, typically a parent or grandparent.",
+    "The daughter of one's own child, such as the child of a son or daughter.",
+    "A young woman who has the same great-grandparents as someone else; also known as a great-granddaughter."
+  ],
+  "grandfather": [
+    "A male ancestor who is a direct precursor of another in a familial line, specifically the father or father-in-law of one's grandparent; often referred to as a grandfather.",
+    "In computing and technology, a term used in version control systems, referring to changes made before a certain date or version, ensuring that no changes made earlier can be overwritten by later ones."
+  ],
+  "grandiloquence": [
+    "A formal, elaborate, and often pompous style of speaking or writing, characterized by grand, extravagant, or exaggerated language."
+  ],
+  "grandiose": [
+    "Impressively large, elaborate, or extravagant; magnificent.",
+    "Pretentiously elaborate or pompous; overly grand in style or manner.",
+    "(Of an idea or plan) excessively ambitious and unrealistic."
+  ],
+  "granite": [
+    "A type of rock formed from the cooling and solidification of magma or lava, characterized by its coarse-grained texture and a mixture of minerals such as quartz, mica, and feldspar.",
+    "(Slang) A strong, unbreakable or resistant material; often used to describe durable objects or materials made from this rock."
+  ],
+  "grantee": [
+    "A person or organization to whom a grant, right, or title is given by another party, often through a legal document such as a deed, will, or trust.",
+    "(Legal) An entity that receives a grant of land, property, rights, or privileges from another party.",
+    "(Finance) A recipient of a grant, often used to describe individuals or organizations who receive financial support for specific projects or research."
+  ],
+  "granulates": [
+    "To crush or break into small, rough, and angular pieces; to reduce something into gravel-like particles by crushing or grinding.",
+    "A process of forming granules by compressing, agglomerating, or sintering smaller particles.",
+    "The formation of a layer or coating on the surface of a material due to particle growth or aggregation under heat, pressure, or chemical action."
+  ],
+  "grape": [
+    "A juicy fruit that grows in clusters, often used to make wine or juice, and is eaten raw as a snack or ingredient in salads and other dishes.",
+    "A round object used for playing the game of pool or billiards.",
+    "A symbol representing grapes, often found on a vine, which may be used to represent abundance or fertility in art, literature, or other creative works."
+  ],
+  "grapes": [
+    "A cluster of berries, typically green or purple in color, used as a fruit, often eaten raw or made into wine.",
+    "Grapes, also known as grapevines, are woody vines that produce the clusters of berries called grapes. They are cultivated in many parts of the world for their fruit and for the production of wine.",
+    "A grape is a small round fruit with a thin skin and juicy flesh eaten fresh or used to make raisins, grape juice, and vinegar. Grapes grow on grapevines, which are deciduous plants that belong to the Vitaceae family."
+  ],
+  "graph": [
+    "A visual representation of data, using points, lines, or symbols to show relationships between different variables or sets of data.",
+    "A diagrammatic representation of a complex structure, such as an organization chart or family tree.",
+    "To represent something by drawing or making a graph."
+  ],
+  "grapple": [
+    "To seize, catch, or grasp hold of something firmly with one's hands or other body parts.",
+    "To struggle to deal with or overcome a difficult situation or problem.",
+    "To try to gain control of something, such as an object or another person, often in a wrestling or fighting context."
+  ],
+  "grasp": [
+    "Seize or take hold of something firmly with your hands.",
+    "Understand, comprehend, or perceive something clearly.",
+    "Comprehend the meaning of a foreign language or a dialect."
+  ],
+  "grass": [
+    "A plant with green leaves and a slender stem, often found in fields and lawns.",
+    "Informal term for an informant or snitch, especially one working with the police.",
+    "A type of cannabis plant containing significant levels of tetrahydrocannabinol (THC).",
+    "The short, green blades that make up a surface covered with these, as in a lawn or field.",
+    "In slang, money, especially when discussing owed debts or payment for services rendered."
+  ],
+  "grassland": [
+    "An area covered with plants that are mainly grasses, which can be used for grazing animals or for growing crops after being cut or burned.",
+    "A type of natural environment characterized by extensive areas of prairie-like vegetation dominated by grasses and other herbaceous plants, typically found in temperate regions of the world."
+  ],
+  "grateful": [
+    "Feeling or showing thankfulness or appreciation.",
+    "Experiencing a sense of obligation to someone for kindness or help received.",
+    "Expressing thanks or gratitude, typically in response to a gift or act of kindness."
+  ],
+  "gratify": [
+    "Please provide me with a context or hint about what type of definition you need for the word \"gratify\". This will help me to give you a more precise answer."
+  ],
+  "grating": [
+    "A perforated board with regular openings used to allow air circulation in heating systems, bathrooms, or kitchen hoods.",
+    "An object or surface that produces an unpleasant, high-pitched sound when touched or moved, often made of metal strips or bars.",
+    "In photography, a screen with fine lines or grooves that can be adjusted to control the amount of light entering the camera."
+  ],
+  "gratitude": [
+    "A feeling of appreciation or thanks.",
+    "An expression of thankfulness, especially to someone for their kindness or help.",
+    "The quality of being thankful; readiness to show appreciation and return favors.",
+    "A recognition or acknowledgment of the goodness in one's life or experiences."
+  ],
+  "gravel": [
+    "A loose mixture of small stones, sand, or pebbles used as a decorative material for gardens or driveways.",
+    "A type of sedimentary rock consisting of rounded stones, cobbles, and pebbles formed in a riverbed or at the base of a stream.",
+    "In medical terms, gravel refers to the passage of kidney stones through the urinary tract, usually accompanied by pain and discomfort."
+  ],
+  "gravitational": [
+    "Relating to or produced by gravity, such as gravitational force or gravitational waves.",
+    "(In astronomy) Of or concerning celestial bodies or objects that are affected by the force of gravity, like planets and stars.",
+    "(In physics) Describing a system or phenomenon involving massive objects being attracted to one another due to their mass, as in the gravitational field or gravitational potential energy.",
+    "(Sometimes metaphorically) Influencing or affecting people's actions, decisions, or outcomes, similar to how gravity affects physical objects."
+  ],
+  "gravity": [
+    "The force by which a planet, star, or other body draws objects toward its center; also known as gravitational attraction.",
+    "The tendency of objects with mass to be attracted to one another, depending on their masses and the distance between them.",
+    "The downward pull or force experienced on an object due to Earth's mass and size; often referred to as 'weight.'",
+    "In literature, a term referring to the quality in a narrative that makes it compelling and keeps readers engaged, such as interesting characters or a captivating plot."
+  ],
+  "grazing": [
+    "Feeding on grass, plants, or other vegetation by herbivorous animals."
+  ],
+  "great": [
+    "Large in size, amount, or extent; vast: a great expanse of ocean.",
+    "Very good; excellent; superb: a great performance by the orchestra.",
+    "Important; notable; famous: a great historian like Herodotus.",
+    "Influential or powerful: leaders with great authority.",
+    "Grandiose, imposing, or magnificent: a great palace.",
+    "Very much; to a large extent: she is great at solving problems."
+  ],
+  "greatest": [
+    "The most important, significant, or influential; supreme.",
+    "The highest quality or level; top-notch.",
+    "The one that comes first or is the best in a competition or contest.",
+    "The most intense, extreme, or remarkable; exceptional."
+  ],
+  "greedy": [
+    "Characterized by an excessive desire for more than one actually needs, often at the expense of others; self-centered or grasping",
+    "(Computing) Refers to an algorithm that consumes more resources than necessary, inefficiently utilizing computer memory or processing time"
+  ],
+  "greet": [
+    "To say hello, welcome, or acknowledge someone in a friendly manner upon meeting them.",
+    "To express congratulations or celebration to someone for an achievement or special occasion.",
+    "To receive or welcome visitors, guests, or customers.",
+    "To acknowledge the arrival of something, such as a new day, season, or year."
+  ],
+  "gregarious": [
+    "Sociable and enjoy spending time with others, often in large groups."
+  ],
+  "gregariously": [
+    "In a sociable manner; enjoying the company of others; displaying outgoing, friendly behavior.",
+    "Characterized by or involving lively and friendly interaction with others; marked by conviviality or camaraderie.",
+    "Engaging in activities or events with a group of people rather than alone; preferring to be around others rather than being by oneself."
+  ],
+  "gremlin": [
+    "A mythical creature, usually represented as a small mischievous being with green skin and pointed ears, believed to cause mechanical failures in aircraft or other machinery by secretly interfering with them.",
+    "An error, glitch, or bug in computer software or hardware that causes unexpected or unintended behavior, often referred to as \"gremlins\" in the context of technology."
+  ],
+  "gremlins": [
+    "Noun: A mischievous or troublesome person, often a coworker or supervisor, who causes problems with electronic devices or machinery by accidentally or intentionally damaging them through carelessness or sabotage.",
+    "Noun: In aviation and military contexts, a mythical creature believed to cause mechanical failures in aircraft, typically characterized as small, mischievous beings that secretly wreak havoc on airplanes and other machines."
+  ],
+  "grew": [
+    "To increase in size, number, or amount over a period of time.",
+    "To develop or undergo change as one grows older.",
+    "(Of a plant or tree) to grow or develop in a particular direction.",
+    "(Of a population or species) to increase in number, typically through reproduction and survival of offspring."
+  ],
+  "grief": [
+    "Deep emotional pain caused by the loss of something or someone significant, such as a loved one or an important possession.",
+    "A feeling of sorrow and suffering that follows a loss or tragedy.",
+    "The process of experiencing the emotions related to a loss over time, often involving intense sadness, yearning, anger, or guilt."
+  ],
+  "grievance": [
+    "A complaint, objection, or dissatisfaction expressed by an individual or a group regarding unfair treatment or some form of injustice.",
+    "In labor relations, a formal complaint made by an employee against the employer for perceived unfair practices or mistreatment.",
+    "A cause of complaint, annoyance, or resentment; a source of discontent."
+  ],
+  "grill": [
+    "A cooking device with a metal frame and usually grates, used to cook food over an open flame or heat source, often outdoors.",
+    "The process of cooking food on a grill, typically involving exposure to direct heat for a short period of time.",
+    "A surface that is heated and used to sear or brown food quickly, as in a griddle or stovetop grill.",
+    "A metal framework or cover with open spaces, used to protect against rain or wind, as in a greenhouse grill.",
+    "To question or examine closely, as in \"grilling\" someone about their actions or motives."
+  ],
+  "gritty": [
+    "Characterized by an unrefined, rough texture: a gritty sandpaper.",
+    "Involving or characterized by hard physical effort: a gritty workout.",
+    "Courageous and resilient in difficult situations: a gritty athlete.",
+    "Having a tough or harsh quality, especially in the context of urban environments: a gritty city neighborhood."
+  ],
+  "grotesque": [
+    "Unusually large, distorted, or misshapen in an exaggerated or comical manner, typically found in art or sculpture.",
+    "Bizarre or bizarrely ugly in appearance or form.",
+    "Something that is shocking or repulsive to the senses, such as a scene of destruction or horror."
+  ],
+  "group": [
+    "A collection of individuals, objects, or entities that have been organized and categorized based on shared characteristics or attributes."
+  ],
+  "grovel": [
+    "Crawl forward on the belly, as in a low or humble position.",
+    "Act in an extremely servile or submissive manner."
+  ],
+  "grow": [
+    "To increase in size, number, or quantity through natural processes such as growth of a plant, animal, or human body.",
+    "To develop or expand in scope, influence, or power over time.",
+    "To produce or yield an increase in amount or value.",
+    "To raise children or young people, helping them to learn and grow."
+  ],
+  "gruesome": [
+    "Terrifyingly frightful, dreadfully horrifying, ghastly.",
+    "Awful in appearance or character; hideous, gruesome.",
+    "Violent and bloody in a way that is shocking and distressing; grisly, macabre."
+  ],
+  "grumble": [
+    "Express discontent, annoyance or dissatisfaction in a low growling voice.",
+    "Speak or utter something grumblingly, complaining or discontentedly.",
+    "(British) Complain noisily; mutter or mumble in an angry way."
+  ],
+  "grumbled": [
+    "Complained or expressed discontent in a low, grumbling voice.",
+    "To express one's dissatisfaction or annoyance by muttering disapprovingly.",
+    "(Informal) To speak in a growling, irritated tone; to utter complaints or objections in an unhappy manner."
+  ],
+  "grumpy": [
+    "A person who is in a bad mood, irritable, or easily annoyed.",
+    "A disposition that is characterized by frequent unhappiness or dissatisfaction.",
+    "An adjective used to describe someone who is feeling upset or irritated."
+  ],
+  "guarantee": [
+    "An assurance that something will happen or a promise that something is certain.",
+    "A written statement promising to pay money in case of default, failure or non-fulfillment of an obligation.",
+    "A guarantee of quality or satisfaction, often provided by manufacturers or sellers.",
+    "An agreement between parties that one party's liability is limited to a specified amount."
+  ],
+  "guess": [
+    "Make an informed or uninformed assumption about something based on partial information, intuition, or previous knowledge.",
+    "To form a rough idea of something by judgment or reasoning; estimate.",
+    "A wild or unsupported assumption; conjecture.",
+    "An attempt to determine the answer to a problem or question without certainty."
+  ],
+  "guest": [
+    "A person who is invited to attend a social event, such as a wedding, party, or dinner.",
+    "Someone who stays temporarily in another's home, usually as a visitor or for special occasions.",
+    "An individual who visits a place, like a hotel or resort, where their accommodations and other services are provided.",
+    "A person who uses the services of an online platform or website without being a registered user."
+  ],
+  "guidance": [
+    "Suggestions, direction, or advice given to help make a decision or achieve a goal.",
+    "A system, device, or structure that helps to control, direct, or support something else.",
+    "The act of steering or controlling something, such as an aircraft or vehicle.",
+    "In education, a program or service designed to provide support and guidance for students with special needs or abilities."
+  ],
+  "guide": [
+    "A person or thing that shows the way, directs, or instructs; a person who leads or directs on a journey or in an activity.",
+    "A book, pamphlet, or other written or printed material providing information and direction in order to assist someone in understanding something or doing something.",
+    "A system of values, principles, or norms that serves as a model for proper conduct or behavior."
+  ],
+  "guiding": [
+    "To lead or direct someone or something along a particular course, path or direction, often with the intention of achieving a specific goal or desired outcome.",
+    "To provide advice, instruction or support to help make decisions, solve problems or navigate through complex situations.",
+    "To serve as an example, model or standard for others to follow or emulate in various aspects of life, behavior, or beliefs."
+  ],
+  "guile": [
+    "Cunning, slyness, or cleverness in achieving one's purpose.",
+    "Clever dissembling; craftiness.",
+    "An instance of using cunning to achieve a purpose.",
+    "A deceitful person.",
+    "Insincerity or duplicity used to gain an advantage."
+  ],
+  "guitar": [
+    "A stringed musical instrument with a fretted neck, played by plucking or strumming the strings"
+  ],
+  "guitars": [
+    "A musical instrument, typically with six strings, consisting of a long fretted neck and a soundboard, played by strumming or plucking the strings to produce various notes and chords."
+  ],
+  "gullible": [
+    "Prone to believe things, especially when they are easily influenced or deceived.",
+    "Susceptible to being tricked or misled due to na\u00efve trust in others."
+  ],
+  "gulp": [
+    "A sudden, large swallow of liquid or food.",
+    "To take in or absorb something quickly, often in a large amount.",
+    "To catch one's breath audibly, typically in surprise or fear.",
+    "To swallow down something with difficulty or reluctance."
+  ],
+  "gun": [
+    "A portable firearm designed to discharge projectiles by means of a propellant charge.",
+    "An artillery piece, such as a cannon or howitzer, which fires heavy projectiles at high velocities.",
+    "The act of firing or discharging a gun, especially in the context of hunting or military actions.",
+    "A metaphorical expression referring to someone or something that is dominant, powerful, or influential, often used in political or business contexts."
+  ],
+  "gush": [
+    "To flow or come out in a steady, heavy stream or continuous, large quantity.",
+    "To speak or write at length and with enthusiasm, especially without much thought for the feelings of others.",
+    "An outpouring or overflowing of emotions, such as joy or sorrow."
+  ],
+  "gust": [
+    "A sudden strong wind, often short-lived; a puff of air.",
+    "A keen or eager desire to experience something new; an eagerness to try something different."
+  ],
+  "gustatory": [
+    "Relating to the sense of taste.",
+    "Pertaining to, involving, or being the gustatory organs, such as taste buds."
+  ],
+  "gusto": [
+    "Enthusiasm and enjoyment in doing something, often with energy and zest.",
+    "A strong liking or preference for a particular kind of food or drink.",
+    "The flavor or quality of something, especially when it is very intense or enjoyable."
+  ],
+  "gusts": [
+    "A sudden, short-lived blast of wind.",
+    "To blow or puff (air) in gusts.",
+    "An abrupt, brief surge or rush of something, such as excitement or enthusiasm."
+  ],
+  "gusty": [
+    "Characterized by sudden, strong winds, causing temporary changes in weather conditions.",
+    "A burst of activity or enthusiasm that comes and goes quickly.",
+    "Something done quickly and with energy, like a burst of wind.",
+    "A sudden, strong change in the atmosphere, usually temporary.",
+    "A brief period of intense action, often followed by calmness."
+  ],
+  "gut": [
+    "The main street in a town, typically running from end to end, usually lined with shops or businesses. This term can be used to describe both historical and modern towns.",
+    "To remove the insides of something, often using a sharp implement like a knife or a hook. For example, gutting a fish means removing its internal organs before cooking it.",
+    "(In computing) A backup copy of data that is made by an automated process to protect against loss due to equipment failure or other causes."
+  ],
+  "gym": [
+    "A place where people go to exercise, work out, or play sports, typically equipped with various machines and facilities for physical fitness."
+  ],
+  "gymnasium": [
+    "A large room or building equipped with exercise machines, weights, and other equipment for physical exercise and sports training.",
+    "An institution providing education in the liberal arts and sciences, especially a secondary school in ancient Greece."
+  ],
+  "gyrate": [
+    "To move in a circular motion around an axis, typically involving rotation.",
+    "To cause something to spin or rotate rapidly.",
+    "To move in a series of rapid curves or spirals."
+  ]
+}

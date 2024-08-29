@@ -5,6 +5,7 @@ import React, { Suspense, useState, useEffect, useRef, useCallback } from 'react
 import { useUser } from '@/contexts/UserContext'
 import { useTTS } from '@/hooks/useTTS'
 import { useRouter, useSearchParams } from 'next/navigation'
+import { FaVolumeUp } from 'react-icons/fa'
 
 const BRUSH_SIZE = 8;
 const BUFFER_SIZE = Math.floor(BRUSH_SIZE / 2);
@@ -32,11 +33,28 @@ const KinestheticPractice: React.FC = () => {
 
   useEffect(() => {
     if (wordsParam) {
-      setWords(JSON.parse(decodeURIComponent(wordsParam)))
+      const parsedWords = JSON.parse(decodeURIComponent(wordsParam));
+      setWords(parsedWords);
+      console.log('Words loaded from searchParams:', parsedWords);
     } else if (user) {
-      setWords(user.challengingWords)
+      setWords(user.challengingWords);
+      console.log('Words loaded from user context:', user.challengingWords);
     }
-  }, [wordsParam, user])
+  }, [wordsParam, user]);
+
+  useEffect(() => {
+    if (words.length > 0) {
+      setCurrentWord(words[currentWordIndex]);
+      console.log(`Current word: ${words[currentWordIndex]} at index ${currentWordIndex}`);
+      // if next word exists, log the next word:
+      if (words[currentWordIndex + 1]) {
+        console.log(`Next word: ${words[currentWordIndex + 1]} at index ${currentWordIndex + 1}`);
+      }
+    } else {
+      setCurrentWord('done');
+      console.log('No words to practice.');
+    }
+  }, [words, currentWordIndex]);
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -276,10 +294,10 @@ const KinestheticPractice: React.FC = () => {
         <h2 className="text-2xl font-bold mb-4">Kinesthetic Practice</h2>
         <p className="mb-2">Trace the word: {words[currentWordIndex]}</p>
         <div className="flex justify-between items-center mb-2">
-          <button onClick={handleSpeak} className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-            Speak Word
+          <button onClick={handleSpeak} className="px-4 py-2 text-white rounded hover:text-blue-500">
+            <FaVolumeUp size={24} />
           </button>
-          <label className="flex items-center">
+          {/* <label className="flex items-center">
             <input 
               type="checkbox" 
               checked={debug} 
@@ -290,13 +308,13 @@ const KinestheticPractice: React.FC = () => {
               className="mr-2" 
             />
             Debug Mode
-          </label>
+          </label> */}
         </div>
         <canvas
           ref={canvasRef}
           width={400}
           height={200}
-          className="border border-gray-300 mb-4"
+          className="border border-gray-300 mb-4 mx-auto"
           onMouseDown={handleMouseDown}
           onMouseUp={handleMouseUp}
           onMouseMove={handleDrawing}
