@@ -26,7 +26,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-  font-family: Farsan, "Coming Soon", cursive;
+  /* font-family: Farsan, "Coming Soon", cursive; */
 }
 
 @layer utilities {
