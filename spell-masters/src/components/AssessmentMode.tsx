@@ -41,7 +41,8 @@ const AssessmentMode: React.FC<AssessmentModeProps> = ({ levelId, assessmentType
   console.log('AssessmentMode rendered with props:', { levelId, assessmentType, sublevel, onComplete: !!onComplete });
   const [words, setWords] = useState<string[]>([])
   const [currentWordIndex, setCurrentWordIndex] = useState(0)
-  const [options, setOptions] = useState<string[]>([])
+  const [options, setOptions] = useState<string[]>([]);
+  const [allOptions, setAllOptions] = useState<string[][]>([]);
   const [score, setScore] = useState(0)
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -54,6 +55,9 @@ const AssessmentMode: React.FC<AssessmentModeProps> = ({ levelId, assessmentType
   const [correctWords, setCorrectWords] = useState<string[]>([])
   const navigationOccurredRef = useRef(false)
   const [exampleSentence, setExampleSentence] = useState<string>("_____");
+  const [definition, setDefinition] = useState<string>("_____");
+  const [isCollapsed, setIsCollapsed] = useState(true);
+  const toggleCollapse = () => setIsCollapsed(!isCollapsed);
 
   const { wordInfo } = useWord(words[currentWordIndex] || '')
   const { generateMisspellings } = useMisspelling()
@@ -105,6 +109,7 @@ const AssessmentMode: React.FC<AssessmentModeProps> = ({ levelId, assessmentType
     }
   }, []);
 
+
   useEffect(() => {
     if (wordInfo && wordInfo.word) {
       fetchExampleSentence(wordInfo.word).then(sentence => {
@@ -113,36 +118,52 @@ const AssessmentMode: React.FC<AssessmentModeProps> = ({ levelId, assessmentType
     }
   }, [wordInfo, fetchExampleSentence]);
 
-  useEffect(() => {
-    if (words.length > 0 && currentWordIndex < words.length) {
-      const correctWord = words[currentWordIndex];
-      const misspellings = generateMisspellings(correctWord, 3);
-      let answerOptions = [correctWord, ...misspellings];
-      if (!ALWAYS_SHOW_CORRECT_FIRST) {
-        answerOptions = answerOptions.sort(() => Math.random() - 0.5);
+  const speakSentence = (sentence: string, word: string) => {
+    // replace the empty space in the sentence with the word
+    sentence = sentence.replace(/_____/g, word);
+    const utterance = new SpeechSynthesisUtterance(sentence);
+    window.speechSynthesis.speak(utterance);
+  };
+
+  const fetchDefinition = useCallback(async (word: string) => {
+    try {
+      const response = await fetch(`/api/definitions?word=${word}`);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
-      setOptions(answerOptions);
+      const data = await response.json();
+      return data.definition || "_____";
+    } catch (error) {
+      console.error('Error fetching definition:', error);
+      return "_____";
+    }
+  }, []);
+
+  useEffect(() => {
+    if (wordInfo && wordInfo.word) {
+      fetchDefinition(wordInfo.word).then((definition) => {
+        // The API returns results as an array of strings
+        setDefinition(definition);
+      });
+    }
+  }, [wordInfo, fetchDefinition]);
+
+  useEffect(() => {
+    if (words.length > 0) {
+      const newAllOptions = words.map(word => {
+        const misspellings = generateMisspellings(word, 3);
+        let answerOptions = [word, ...misspellings];
+        if (!ALWAYS_SHOW_CORRECT_FIRST) {
+          answerOptions = answerOptions.sort(() => Math.random() - 0.5);
+        }
+        return answerOptions;
+      });
+      setAllOptions(newAllOptions);
+      setOptions(newAllOptions[currentWordIndex] || []);
       setStartTime(Date.now());
       answeredRef.current = false;
-      
-      // Check if word is new only if it's not already in the mastered list
-      if (user) {
-        const isNewWord = !Object.entries(user.levelProgress).some(([lvl, progress]) => {
-            // Iterate through the core or bonus arrays to check completed status
-            const levelProgress = progress.core.find(p => p.sublevel === sublevel && p.completed);
-            const isWordMastered = levelProgress?.words.includes(correctWord);
-  
-            // Debugging: Log the progress check
-            // console.log(`Level: ${lvl}, Sublevel: ${sublevel}, Correct Word: ${correctWord}, Mastered: ${isWordMastered}`);
-            
-            return levelProgress && isWordMastered;
-        });
-  
-        // Debugging: Log if the word is new or not
-        // console.log(`Word "${correctWord}" is ${isNewWord ? 'new' : 'already mastered'}.`);
-      }
     }
-  }, [words, currentWordIndex, generateMisspellings, user, levelId, sublevel]);
+  }, [words, currentWordIndex, generateMisspellings]);
 
   const handleAnswer = useCallback((selectedOption: string) => {
     if (answeredRef.current) return
@@ -325,10 +346,42 @@ const AssessmentMode: React.FC<AssessmentModeProps> = ({ levelId, assessmentType
       {wordInfo && (
         <div className="mb-4">
           <div
-            className="text-lg font-semibold"
-            style={{ height: '4.5rem' }}
+            className="text-lg font-semibold pb-3"
+            style={{ height: '8rem' }}
           >
-            {exampleSentence}
+            <h4>Example</h4>
+            <FaVolumeUp
+              size={24}
+              className="inline-block cursor-pointer pr-2"
+              onClick={() => speakSentence(exampleSentence, wordInfo.word)}
+            />
+            <span>{exampleSentence}</span>
+          </div>
+          <div
+            className="text-md font-semibold pb-3"
+          >
+            {definition.length > 0 ? (
+              <div>
+                <div onClick={toggleCollapse} style={{ cursor: 'pointer', marginBottom: '10px' }}>
+                  {isCollapsed ? '▼' : '▲'} Definition
+                </div>
+                {!isCollapsed && (
+                  <div>
+                    <ol>
+                      {Array.isArray(definition) ? (
+                        definition.map((d: string, index) => (
+                          <li key={index}>{d}</li>
+                        ))
+                      ) : (
+                        <p>No definitions available</p>
+                      )}
+                    </ol>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <p>No definitions available</p>
+            )}
           </div>
           <button
             onClick={handleSpeak}
