@@ -44,21 +44,27 @@ At Spell Masters, we take your privacy seriously. Our app is designed with a "pr
 ## 🎨 Screenshots
 
 ![Supports Multiple Profiles](https://github.com/user-attachments/assets/6afa48f0-8edd-4cdd-a7fe-9ba61634db6e)
+
 **Support for Multiple Users:** Spell Masters allows multiple profiles on the same device, perfect for families or classrooms. Each user has their own personalized learning journey.
 
 ![Level Progression](https://github.com/user-attachments/assets/16261c73-521b-43f9-abdc-5979ea657f6d)
+
 **Engaging Level System:** Our intuitive level progression system keeps learners motivated. Complete levels to earn stars and unlock new challenges, providing a sense of accomplishment and encouraging continued practice.
 
 ![Multiple-Choice Assessments](https://github.com/user-attachments/assets/1743c868-b200-40fe-87f8-22bd6d84e92e)
+
 **Contextual Learning:** Words are presented in the context of a sentence, helping learners understand usage and meaning. Multiple-choice options challenge users to identify the correct spelling.
 
 ![Optional Keyboard Input](https://github.com/user-attachments/assets/008e0c8b-6a30-449f-839d-44050210ee09)
+
 **Flexible Input Methods:** In addition to multiple-choice, Spell Masters offers a keyboard input mode for more advanced practice, allowing learners to type out words and hone their spelling skills.
 
 ![Evaluation History](https://github.com/user-attachments/assets/14dc8e27-abf3-4b0a-b7fb-c748743c32bb)
+
 **Comprehensive Progress Tracking:** Detailed evaluation history helps both learners and educators track progress over time. Identify areas of improvement and celebrate growth with our in-depth analytics.
 
 ![Trace the Word](https://github.com/user-attachments/assets/eca1e3a8-f540-4671-bdca-93518407a711)
+
 **Kinesthetic Learning:** Our unique tracing feature engages muscle memory, reinforcing spelling through physical interaction. This multisensory approach caters to different learning styles and enhances retention.
 
 ## 🚀 Getting Started
