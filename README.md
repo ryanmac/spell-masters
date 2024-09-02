@@ -12,7 +12,7 @@ Welcome to Spell Masters, the ultimate web-based spelling adventure for students
   - 🖌️ Kinesthetic Practice: Trace words to reinforce muscle memory.
   - 🎯 Targeted Reinforcement: Focus on challenging words.
   - 🏆 Bonus Challenges: Extra credit words for the ambitious speller!
-  - ⌨️ Keyboard Input: Without hints, spell the words.
+  - ⌨️ Keyboard Input: Test your spelling and typing skills with keyboard input.
 - **Progress Tracking:** Detailed statistics and visual progress indicators.
 - **Gamification:** Star ratings, level progression, and achievements to keep you motivated.
 - **Multisensory Approach:** Visual, auditory, and kinesthetic elements for comprehensive learning.
