@@ -1,13 +1,64 @@
 /* src/app/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&family=Farsan&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 60, 60, 60; /* Mid-tone grey */
   --background-end-rgb: 120, 120, 120; /* Light grey */
+  --font-inter: var(--font-inter);
+  --font-figtree: var(--font-figtree);
+  --font-monda: var(--font-monda);
+  --font-kablammo: var(--font-kablammo);
+  --font-playpen-sans: var(--font-playpen-sans);
+  --font-noto-sans: var(--font-noto-sans);
+  --font-quicksand: var(--font-quicksand);
+  --font-shantell-sans: var(--font-shantell-sans);
+  --font-edu-tas-beginner: var(--font-edu-tas-beginner);
+}
+
+* {
+  font-family: inherit;
+}
+
+/* Define custom font classes using the initialized fonts */
+.font-inter {
+  font-family: var(--font-inter);
+}
+
+.font-figtree {
+  font-family: var(--font-figtree);
+}
+
+.font-monda {
+  font-family: var(--font-monda);
+}
+
+.font-kablammo {
+  font-family: var(--font-kablammo);
+}
+
+.font-playpen-sans {
+  font-family: var(--font-playpen-sans);
+}
+
+.font-noto-sans {
+  font-family: var(--font-noto-sans);
+}
+
+.font-quicksand {
+  font-family: var(--font-quicksand);
+}
+
+.font-shantell-sans {
+  font-family: var(--font-shantell-sans);
+}
+
+.font-edu-tas-beginner {
+  font-family: var(--font-edu-tas-beginner);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,7 +77,6 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-  /* font-family: Farsan, "Coming Soon", cursive; */
 }
 
 @layer utilities {
@@ -45,4 +95,8 @@ body {
     margin: 0.5em 0; /* Ensure each list item has spacing */
     color: inherit; /* Inherit the color defined for the body */
   }
+}
+
+canvas {
+  touch-action: none;
 }

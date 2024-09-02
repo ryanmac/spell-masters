@@ -36,7 +36,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background-start to-background-end text-foreground">
-      <header className="bg-blue-600 text-white p-4 flex justify-between items-center">
+      <header className="text-white p-4 flex justify-between items-center">
         <h1 className="text-2xl font-bold">
           <Link href="/dashboard">Spell Masters</Link>
         </h1>

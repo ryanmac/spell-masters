@@ -286,7 +286,7 @@ const AssessmentMode = React.memo<AssessmentModeProps>(({
         speak(currentWord);
       }
     }
-  }, [words, currentWordIndex, autoSpeak]);
+  }, [words, currentWordIndex, autoSpeak, speak, stop]);
 
   useEffect(() => {
     if (assessmentComplete && user && !navigationOccurredRef.current) {
@@ -448,7 +448,7 @@ const AssessmentMode = React.memo<AssessmentModeProps>(({
                   : option === selectedAnswer
                   ? 'bg-red-500 text-white'
                   : 'bg-gray-500'
-                : 'bg-blue-500 hover:bg-blue-600'
+                : 'bg-blue-500 hover:bg-blue-500'
             }`}
             disabled={showFeedback}
           >
